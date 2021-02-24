@@ -1,0 +1,35 @@
+@use 'src/styles/vars';
+
+.app {
+    display: flex;
+    flex-direction: column;
+  &__logo {
+    position: absolute;
+    height: 100vh;
+    z-index: 2;
+    &__MC {
+      position: absolute;
+      position: fixed;
+      top: 30px;
+      left: 30px;
+      width: 4em;
+      z-index: 2;
+      cursor: pointer;
+    }
+    &__addLink {
+      position: absolute;
+      position: fixed;
+      left: 30px;
+      bottom: 30px;
+      width: 2.5em;
+      background-color: transparent;
+      border: none;
+      transition: 250ms;
+      z-index: 2;
+    }
+    &__addLink:hover {
+      width: 3em;
+      transition: 250ms;
+    }
+  }
+}

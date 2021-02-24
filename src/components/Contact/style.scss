@@ -1,0 +1,164 @@
+@use 'src/styles/vars';
+
+@mixin backlight($x, $y, $spread, $size, $colorA, $colorB, $duration) {
+  &:after {
+    position: absolute;
+    content: "";
+    top: $y;
+    left: $x;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale($size);
+    -webkit-filter: blur($spread);
+    -moz-filter: blur($spread);
+    -ms-filter: blur($spread);
+    filter: blur($spread);
+    background: linear-gradient(145deg, $colorA, $colorB);
+    background-size: 200% 200%;
+    animation: animateGlow $duration ease infinite;
+    
+    @keyframes animateGlow {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+  }
+}
+.contact {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  height: 100vh;
+  color: vars.$secondary-color;
+  &__container {
+    &__title {
+        font-size: 1em;
+        color: white;
+        font-size: 1em;
+        margin-bottom: 2em;
+        color: white;
+        text-transform: inherit;
+      }
+    &__form {
+      position: relative;
+      line-height : 1.2em;
+      padding: 4em 5em;
+      max-width: 800px;
+      background-color: vars.$main-dark-color;
+      border-radius: 8px;
+      @include backlight(6vw, 0vw, 6vw, 0.70, vars.$secondary-color, #5846f6, 7s);
+      &__paragraph {
+        margin-bottom: 2em 1em;
+        &__input {
+          font-size: 1em;
+          height: 40px;
+          width: 100%;
+          border: none;
+          border-bottom : 1px solid vars.$secondary-color;
+          padding: 1em 1em;
+          margin-bottom: 1em;
+          margin-top: 0.2em;
+          background-color: transparent;
+          color: white;
+          &__message {
+            font-family: 'bahnschrift';
+            letter-spacing: 0.1em;
+            font-size: 0.8em;
+            width: 100%;
+            resize: none;
+            margin-top: 0.2em;
+            padding: 1em 1em;
+            outline: 0;
+            border: none;
+            border-bottom : 1px solid vars.$secondary-color;
+            background-color: transparent;
+            color: white;
+          }
+          &__message:hover, &__message:focus{
+            border-bottom: 2px solid vars.$secondary-color;
+          }
+        }
+        &__input:hover, &__input:focus {
+          border-bottom: 2px solid vars.$secondary-color;
+        }
+        &__input::placeholder{
+          font-family: 'bahnschrift';
+          letter-spacing: 0.1em;
+          font-size: 0.8em;
+        }
+        &__message::placeholder {
+          font-family: 'bahnschrift';
+          letter-spacing: 0.1em;
+          font-size: 0.8em;
+        }
+        &__formButton {
+          display: block;
+          position: relative;
+          text-transform: uppercase;
+          border: none;
+          outline: none;
+          overflow: hidden;
+          height: 40px;
+          width: 120px;
+          color: white;
+          font-weight: 700;
+          font-size: 15px;
+          background-color:vars.$secondary-color;;
+          margin-top: 1em;
+        }
+        &__formButton span {
+          position: relative; 
+          z-index: 1;
+        }
+        
+        &__formButton:after {
+          content: "";
+          position: absolute;
+          left: -48px;
+          top: 0;
+          height: 500%;
+          width: 155%;
+          background: white;
+          -webkit-transition: all .5s ease-in-out;
+          transition: all .5s ease-in-out;
+          -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+          transform: translateX(-98%) translateY(-25%) rotate(45deg);
+        }
+        
+        &__formButton:hover:after {
+          -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+          transform: translateX(-9%) translateY(-25%) rotate(45deg);
+        }
+        &__formButton:hover {
+          color: vars.$secondary-color;;
+        }
+      }
+    }
+  }
+}
+
+.contact__container__form__paragraph__input::placeholder {
+  color: white;
+}
+.contact__container__form__paragraph__input__message::placeholder {
+  color: white;
+}
+
+.arrow {
+  position: absolute;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 2.5em;
+  background-color: transparent;
+  border: none;
+  transition: 250ms;
+  z-index: 2;
+  &:hover {
+    width: 3em;
+    transition: 250ms;
+  }
+}

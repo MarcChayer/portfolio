@@ -1,0 +1,19 @@
+@use 'reset';
+@use 'vars';
+
+body {
+  font-family: 'bahnschrift';  
+  background: linear-gradient(-45deg, vars.$main-dark-color 0%, #020407 50%, vars.$main-dark-color 100%) no-repeat;
+  // height: 100vh;
+}
+
+/* 
+  // or you can import your own font
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/Roboto-Regular.ttf');
+  }
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+*/

@@ -1,0 +1,106 @@
+@use 'src/styles/vars';
+
+@mixin backlight($x, $y, $spread, $size, $colorA, $colorB, $duration) {
+  &:after {
+    position: absolute;
+    content: "";
+    top: $y;
+    left: $x;
+    right: 0;
+    z-index: -2;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale($size);
+    -webkit-filter: blur($spread);
+    -moz-filter: blur($spread);
+    -ms-filter: blur($spread);
+    filter: blur($spread);
+    background: linear-gradient(145deg, $colorA, $colorB);
+    background-size: 200% 200%;
+    animation: animateGlow $duration ease infinite;
+    
+    @keyframes animateGlow {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+  }
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color:white;
+  height: 100vh;
+  &__firstBox {
+
+  }
+  &__secondBox {
+  }
+}
+
+.bio {
+  width: 800px;
+  background-color: vars.$main-dark-color;
+  padding: 3em 4em;
+  border-radius: 8px;
+  @include backlight(4vw, 1vw, 6vw, 0.60, vars.$secondary-color, #5846f6, 7s);
+  &__title {
+    color: vars.$secondary-color;
+    margin-bottom: 1em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid white;
+  }
+  &__text {
+    margin-bottom: 1em;
+    &__technos {
+      color: vars.$secondary-color;
+      margin-bottom: 1em;
+    }
+  }
+}
+
+.cpt {
+  background-color: vars.$main-dark-color;
+  width: 800px;
+  padding: 3em 4em;
+  border-radius: 8px;
+  @include backlight(-4vw, 1vw, 6vw, 0.65, #5846f6, vars.$secondary-color,  4s);
+}
+.allSkills {
+  display: flex;
+  width: 100%;
+  &__design{
+    width: 450px;
+    padding-right: 1em;
+    &__firstTitle{
+      color: vars.$secondary-color;
+      margin-bottom: 1em;
+      padding-bottom: 0.3em;
+      border-bottom: 1px solid white;
+    }
+    &__secondTitle{
+      color: vars.$secondary-color;
+      margin: 1em 0 1em 0;
+    }
+  }
+  &__web{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    width: 450px;
+    padding-left: 1em;
+    &__thirdTitle{
+      color: vars.$secondary-color;
+      margin: 0 0 1em 0;
+    }
+  }
+}
