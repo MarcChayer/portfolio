@@ -44,12 +44,17 @@
 
 .leftSide {
   display: flex;
-  align-content: flex-end;
+  align-items: flex-end;
+  justify-content: center;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 400px;
+
 }
 .cercle {
   position: absolute;
-  width: 25vw;
-  height: 25vw;
+  width: 20vw;
+  height: 20vw;
   background-color: vars.$main-dark-color;
   border-radius: 400px;
   @include backlight(0vw, 5vw, 5vw, 0.70, vars.$secondary-color, #5846f6, 7s);
@@ -68,7 +73,8 @@
 }
 
 .profile {
-  height: 25vw;
+  overflow: hidden;
+  height: 20vw;
   border-radius: 0 0 400px 400px;
   z-index: 2;
 }

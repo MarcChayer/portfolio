@@ -1,11 +1,11 @@
 // == Import : npm
 import React, { useEffect } from 'react';
 
-import Projetdesign from './projetDesign'
-import Projetweb from './projetWeb'
+import Projetdesign from '../../containers/ProjectDesign'
+import Projetweb from './ProjectWeb'
 
-import projectDesign from '../../data/projectsDesign';
-import projectWeb from '../../data/projectsWeb';
+import projectDesignDate from '../../data/projectsDesign';
+import projectWebData from '../../data/projectsWeb';
 // import PropTypes from 'prop-types';
 
 // == Import : local
@@ -19,20 +19,20 @@ import mof from '../../assets/images/MOF.jpg';
 import d3d from '../../assets/images/doudoune.png';
 
 // == Composant
-const Projects = () => { 
+const Projects = ({ showBox, projectId }) => { 
   const [showDesign, setShowDesign] = React.useState(true)
   const [showWeb, setShowWeb] = React.useState(false)
-
+  
   const onClick = () => {
     setShowWeb(false);
     setShowDesign(true);
   }
-
+  
   const handleOnClick = () => {
     setShowDesign(false);
     setShowWeb(true);
   }
-  const listImage = document.querySelectorAll('.item');
+  console.log('projectId', projectId);
   return (
     <div className="allProjects" >
         <section data-aos="fade-left" className="allProjects__listLeft" >
@@ -48,11 +48,10 @@ const Projects = () => {
             { 
               showDesign 
               ?
-              projectDesign.map((oneProject) => (
+              projectDesignDate.map((oneProject) => (
                 <Projetdesign
-                  key={oneProject.description}
+                  key={oneProject.id}
                   {...oneProject}
-                  {...listImage}
                 /> 
               ))
               : 
@@ -61,23 +60,53 @@ const Projects = () => {
             { 
               showWeb 
               ? 
-              projectWeb.map((oneProject) => (
+              projectWebData.map((oneProject) => (
                 <Projetweb
-                  key={oneProject.description}
+                  key={oneProject.id}
                   {...oneProject}
                 /> 
               ))
-              : 
+              :
               null 
             }
           </div>
         </section>
         <section className="allProjects__photoProject">
-            <div data-project-no="1" className="item" style={{ backgroundImage: `url(${laBoite})` }}></div>
-            <div data-project-no="2" className="item" style={{ backgroundImage: `url(${lpgc})` }}></div>
-            <div data-project-no="3" className="item" style={{ backgroundImage: `url(${ltdm})` }}></div>
-            <div data-project-no="4" className="item" style={{ backgroundImage: `url(${mof})` }}></div>
-            <div data-project-no="5" className="item" style={{ backgroundImage: `url(${d3d})` }}></div>
+          {
+            projectId === 1
+            ?
+            <div image-id="1" className="item" style={{ backgroundImage: `url(${laBoite})` }}></div>
+            :
+            null
+          }
+          {
+            projectId === 2
+            ?
+            <div image-id="2" className="item" style={{ backgroundImage: `url(${lpgc})` }}></div>
+            :
+            null
+          }
+          {
+            projectId === 3
+            ?
+            <div image-id="3" className="item" style={{ backgroundImage: `url(${ltdm})` }}></div>
+            :
+            null
+          }
+          {
+            projectId === 4
+            ?
+            <div image-id="4" className="item" style={{ backgroundImage: `url(${mof})` }}></div>
+            :
+            null
+          }
+          {
+            projectId === 5
+            ?
+            <div image-id="5" className="item" style={{ backgroundImage: `url(${d3d})` }}></div>
+            :
+            null
+          }
         </section>
     </div>
   );

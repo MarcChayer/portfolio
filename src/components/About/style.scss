@@ -40,27 +40,23 @@ h1 {
   justify-content: space-evenly;
   color:white;
   height: 100vh;
-  &__firstBox {
-
-  }
-  &__secondBox {
-  }
 }
 
 .bio {
-  width: 800px;
+  width: 1000px;
   background-color: vars.$main-dark-color;
   padding: 3em 4em;
-  border-radius: 8px;
-  @include backlight(4vw, 1vw, 6vw, 0.60, vars.$secondary-color, #5846f6, 7s);
+  // border-radius: 15px 0 0 15px;
+  border-left: 2px solid vars.$secondary-color;
+  @include backlight(4vw, 1vw, 6vw, 0.65, vars.$secondary-color, #5846f6, 7s);
   &__title {
+    font-size: 1.5rem;
     color: vars.$secondary-color;
     margin-bottom: 1em;
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid white;
   }
   &__text {
     margin-bottom: 1em;
+    line-height: 1.4em;
     &__technos {
       color: vars.$secondary-color;
       margin-bottom: 1em;
@@ -70,9 +66,9 @@ h1 {
 
 .cpt {
   background-color: vars.$main-dark-color;
-  width: 800px;
+  width: 1000px;
   padding: 3em 4em;
-  border-radius: 8px;
+  border-left: 2px solid vars.$secondary-color;
   @include backlight(-4vw, 1vw, 6vw, 0.65, #5846f6, vars.$secondary-color,  4s);
 }
 .allSkills {
@@ -81,26 +77,27 @@ h1 {
   &__design{
     width: 450px;
     padding-right: 1em;
+    line-height: 1.4em;
     &__firstTitle{
+      letter-spacing: 0.1rem;
+      font-size: 1.5rem;
       color: vars.$secondary-color;
       margin-bottom: 1em;
       padding-bottom: 0.3em;
-      border-bottom: 1px solid white;
     }
     &__secondTitle{
       color: vars.$secondary-color;
-      margin: 1em 0 1em 0;
+      margin: 1em 0 0.4em 0;
     }
   }
   &__web{
     display: flex;
     flex-direction: column;
-    align-self: flex-end;
-    width: 450px;
+    line-height: 1.4em;
     padding-left: 1em;
     &__thirdTitle{
       color: vars.$secondary-color;
-      margin: 0 0 1em 0;
+      margin: 0 0 0.4em 0;
     }
   }
 }

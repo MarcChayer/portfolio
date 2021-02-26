@@ -1,6 +1,7 @@
 // == Import : npm
 import React, { useEffect } from 'react';
 import Aos from 'aos';
+import { config, useSpring, animated } from 'react-spring'
 
 // import PropTypes from 'prop-types';
 
@@ -15,37 +16,37 @@ const About = () => {
   },[])
   return (
     <div className="about" >
-      <section data-aos="flip-right" className="about__firstBox">
+      <section data-aos="fade-left" className="about__firstBox">
         <div className="bio" >
           <h1 className="bio__title">
             Bio.
           </h1>
-          <p className="bio__text" data-aos="flip-right">
+          <p className="bio__text" >
             Je suis Marc Chayer, j’ai 30 ans et je vis à Toulouse.
             Graphiste depuis plus de 9 ans, j'ai décidé d’améliorer
             mes compétences en me tournant vers le developpement web.
           </p>
-          <p className="bio__text" data-aos="flip-right">
+          <p className="bio__text" >
             J’ai donc rejoins l’école O’clock (labelisée grande école du numérique) 
             pour une formation intensive de 5 mois, où j’ai pu apprendre 
             les technos suivantes : 
           </p>
-          <p className="bio__text__technos" data-aos="flip-right">
+          <p className="bio__text__technos" >
             HTML, CSS, Javascript, React, Redux, Node.js, PostgreSQL.
           </p>
-          <p className="bio__text" data-aos="flip-right">
+          <p className="bio__text" >
             Je suis maintenant à la recherche d’un emploi sur Toulouse 
             et ses environs afin de mettre en pratique mon savoir
             et mes compétences techniques.
           </p>
         </div>
       </section>
-      <section data-aos="flip-right" className="about__secondBox">
+      <section data-aos="fade-left" className="about__secondBox">
         <div className="cpt">
           <h1 className="allSkills__design__firstTitle" >
             compétences transversales et techniques
           </h1>
-          <div className="allSkills" data-aos="flip-right">
+          <div className="allSkills" >
               <div className="allSkills__design">
                 <ul className="allSkills__design__list">
                   <li>- Français : langue natale</li>

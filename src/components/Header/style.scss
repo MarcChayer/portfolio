@@ -5,6 +5,7 @@
   position: absolute;
   position: fixed;
   right: 0;
+  z-index: 14;
   &__group {
     display: flex;
     flex-direction: column;

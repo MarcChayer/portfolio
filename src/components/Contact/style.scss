@@ -48,7 +48,7 @@
       padding: 4em 5em;
       max-width: 800px;
       background-color: vars.$main-dark-color;
-      border-radius: 8px;
+      border-left: 2px solid vars.$secondary-color;
       @include backlight(6vw, 0vw, 6vw, 0.70, vars.$secondary-color, #5846f6, 7s);
       &__paragraph {
         margin-bottom: 2em 1em;
@@ -156,7 +156,7 @@
   background-color: transparent;
   border: none;
   transition: 250ms;
-  z-index: 2;
+  z-index: 15;
   &:hover {
     width: 3em;
     transition: 250ms;
