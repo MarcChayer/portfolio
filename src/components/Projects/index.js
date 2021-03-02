@@ -1,8 +1,8 @@
 // == Import : npm
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import Projetdesign from '../../containers/ProjectDesign'
-import Projetweb from './ProjectWeb'
+import Projetweb from '../../containers/ProjectWeb'
 
 import projectDesignDate from '../../data/projectsDesign';
 import projectWebData from '../../data/projectsWeb';
@@ -12,16 +12,21 @@ import projectWebData from '../../data/projectsWeb';
 import './style.scss';
 import 'aos/dist/aos.css';
 
+// image design project
 import laBoite from '../../assets/images/laBoite.jpg';
 import lpgc from '../../assets/images/lpGenieClimatique.jpg';
 import ltdm from '../../assets/images/leToitDeMauzac.jpg';
 import mof from '../../assets/images/MOF.jpg';
 import d3d from '../../assets/images/doudoune.png';
+// image web project
+import trackfit from '../../assets/images/trackfit.PNG';
+import hotel from '../../assets/images/mimadoHotel.jpg';
+import portfolio from '../../assets/images/portfolio.PNG';
 
 // == Composant
-const Projects = ({ showBox, projectId }) => { 
-  const [showDesign, setShowDesign] = React.useState(true)
-  const [showWeb, setShowWeb] = React.useState(false)
+const Projects = ({ projectId }) => { 
+  const [showDesign, setShowDesign] = React.useState(false)
+  const [showWeb, setShowWeb] = React.useState(true)
   
   const onClick = () => {
     setShowWeb(false);
@@ -32,31 +37,18 @@ const Projects = ({ showBox, projectId }) => {
     setShowDesign(false);
     setShowWeb(true);
   }
-  console.log('projectId', projectId);
   return (
     <div className="allProjects" >
         <section data-aos="fade-left" className="allProjects__listLeft" >
           <div className="project">
             <div className="project__allTitles">
-              <button id="titleDesign" onClick={onClick}>
-                design
-              </button>
               <button id="titleWeb" onClick={handleOnClick}>
                 web
               </button>
+              <button id="titleDesign" onClick={onClick}>
+                design
+              </button>
             </div>
-            { 
-              showDesign 
-              ?
-              projectDesignDate.map((oneProject) => (
-                <Projetdesign
-                  key={oneProject.id}
-                  {...oneProject}
-                /> 
-              ))
-              : 
-              null 
-            }
             { 
               showWeb 
               ? 
@@ -67,6 +59,18 @@ const Projects = ({ showBox, projectId }) => {
                 /> 
               ))
               :
+              null 
+            }
+            { 
+              showDesign 
+              ?
+              projectDesignDate.map((oneProject) => (
+                <Projetdesign
+                  key={oneProject.id}
+                  {...oneProject}
+                /> 
+              ))
+              : 
               null 
             }
           </div>
@@ -104,6 +108,27 @@ const Projects = ({ showBox, projectId }) => {
             projectId === 5
             ?
             <div image-id="5" className="item" style={{ backgroundImage: `url(${d3d})` }}></div>
+            :
+            null
+          }
+          {
+            projectId === 6
+            ?
+            <div image-id="6" className="item" style={{ backgroundImage: `url(${trackfit})` }}></div>
+            :
+            null
+          }
+          {
+            projectId === 7
+            ?
+            <div image-id="7" className="item" style={{ backgroundImage: `url(${hotel})` }}></div>
+            :
+            null
+          }
+          {
+            projectId === 8
+            ?
+            <div image-id="8" className="item" style={{ backgroundImage: `url(${portfolio})` }}></div>
             :
             null
           }

@@ -23,7 +23,6 @@ const ProjectDesign = ({
   };
   
   return (
-    
     <div className="titleImage">
       <ul data-aos="fade-zoom-in" className="projects">
         <li  className="projects__titleProjects" onMouseEnter={handleMouseEnter}>

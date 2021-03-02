@@ -51,7 +51,6 @@ const Contact = () => {
         <img 
           src={arrow} 
           href="retour accueil" 
-          // onClick={this.scrollToTop}
         />
         </button>
       </Link>

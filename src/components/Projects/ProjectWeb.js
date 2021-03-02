@@ -9,14 +9,29 @@ import './style.scss';
 import 'aos/dist/aos.css';
 
 // == Composant
-const ProjectDesign = ({fullName}) => { 
+const ProjectDesign = ({
+  fullName,
+  id,
+  getIdTitle,
+}) => { 
   useEffect(() => {
     Aos.init({ duration: 3000 })
   },[])
+
+  const handleMouseEnter = () => {
+    getIdTitle(id);
+  };
+
   return (
+    <div className="titleImage">
     <ul data-aos="fade-zoom-in" className="projects">
-      <li className="titleProjects">{fullName}</li>
+      <li  className="projects__titleProjects" onMouseEnter={handleMouseEnter}>
+        <a project-id={id} href="#" >
+          {fullName}
+        </a>
+      </li>
     </ul>
+  </div>
   );
 };
 

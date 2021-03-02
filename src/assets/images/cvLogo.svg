@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg version="1.1" id="Calque_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 283.465 180.619"
+	 enable-background="new 0 0 283.465 180.619" xml:space="preserve">
+<metadata>
+	<sfw  xmlns="&ns_sfw;">
+		<slices></slices>
+		<sliceSourceBounds  bottomLeftOrigin="true" height="180.619" width="283.465" x="0" y="62.723"></sliceSourceBounds>
+	</sfw>
+</metadata>
+<g>
+	<path fill="#FFFFFF" d="M29.454,172.89c-9.576-5.152-16.878-12.658-21.908-22.517C2.514,140.515,0,128.608,0,114.651V66.089
+		c0-13.955,2.514-25.864,7.546-35.722c5.03-9.859,12.332-17.384,21.908-22.577C39.027,2.598,50.55,0,64.02,0
+		c11.116,0,21.056,2.394,29.819,7.181c8.763,4.788,16.005,11.745,21.726,20.873c5.72,9.128,9.676,20.144,11.867,33.045H92.865
+		c-1.298-5.843-3.307-10.832-6.025-14.971c-2.72-4.138-6.005-7.303-9.859-9.494c-3.854-2.19-8.175-3.286-12.962-3.286
+		c-6.249,0-11.562,1.278-15.944,3.834c-4.381,2.556-7.729,6.289-10.041,11.197c-2.313,4.91-3.469,10.813-3.469,17.709v48.563
+		c0,6.898,1.156,12.779,3.469,17.648c2.312,4.869,5.66,8.581,10.041,11.136c4.382,2.556,9.696,3.834,15.944,3.834
+		c4.869,0,9.25-1.075,13.145-3.225c3.895-2.149,7.181-5.295,9.859-9.433c2.678-4.139,4.625-9.168,5.842-15.092h34.566
+		c-2.272,12.901-6.268,23.916-11.988,33.044c-5.721,9.128-12.943,16.087-21.665,20.873c-8.723,4.789-18.643,7.181-29.758,7.181
+		C50.55,180.619,39.027,178.044,29.454,172.89z"/>
+	<path fill="#FFFFFF" d="M139.602,1.825h34.322l37.609,118.06l37.608-118.06h34.323l-58.908,176.968H198.51L139.602,1.825z"/>
+</g>
+</svg>

@@ -1,7 +1,7 @@
 import { ID_DISPATCH } from '../actions/projectDesignWeb';
 
 const initialState = {
-  id: 1,
+  id: 6,
 };
 
 const projectDesignWeb = (state = initialState, action = {}) => {
