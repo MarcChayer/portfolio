@@ -165,3 +165,12 @@
 
   }
 }
+
+.toast{
+  &__success {
+    background-color: vars.$secondary-color;
+  }
+  &__error {
+    background-color: vars.$toast-error;
+  }
+}

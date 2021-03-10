@@ -38,12 +38,12 @@
   position: absolute;
   z-index: -1;
   background-position: center;
-  background-size: contain ;
+  background-size: cover ;
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
   opacity: 1;
-  animation: transitionImage 1.5s;
+  animation: transitionImage 1s;
 }
 
 .project {

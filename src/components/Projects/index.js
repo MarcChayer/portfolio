@@ -19,9 +19,9 @@ import ltdm from '../../assets/images/leToitDeMauzac.jpg';
 import mof from '../../assets/images/MOF.jpg';
 import d3d from '../../assets/images/doudoune.png';
 // image web project
-import trackfit from '../../assets/images/trackfit.PNG';
+import trackfit from '../../assets/images/trackfit.jpg';
 import hotel from '../../assets/images/mimadoHotel.jpg';
-import portfolio from '../../assets/images/portfolio.PNG';
+import portfolio from '../../assets/images/portfolio.jpg';
 
 // == Composant
 const Projects = ({ projectId }) => { 
