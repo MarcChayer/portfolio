@@ -39,7 +39,7 @@ const Projects = ({ projectId }) => {
   }
   return (
     <div className="allProjects" >
-        <section data-aos="fade-left" className="allProjects__listLeft" >
+        <section data-aos="slide-up" className="allProjects__listLeft" >
           <div className="project">
             <div className="project__allTitles">
               <button id="titleWeb" onClick={handleOnClick}>

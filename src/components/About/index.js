@@ -1,22 +1,22 @@
 // == Import : npm
 import React, { useEffect } from 'react';
 import Aos from 'aos';
-import { config, useSpring, animated } from 'react-spring'
+// import { config, useSpring, animated } from 'react-spring'
 
 // import PropTypes from 'prop-types';
 
 // == Import : local
 import './style.scss';
-import 'aos/dist/aos.css';
+// import 'aos/dist/aos.css';
 
 // == Composant
 const About = () => { 
   useEffect(() => {
-    Aos.init({ duration: 2000 })
+    Aos.init({ duration: 2000, disable: 'mobile' })
   },[])
   return (
     <div className="about" >
-      <section data-aos="fade-left" className="about__firstBox">
+      <section data-aos="slide-up"className="about__firstBox">
         <div className="bio" >
           <h1 className="bio__title">
             Bio.
@@ -41,7 +41,7 @@ const About = () => {
           </p>
         </div>
       </section>
-      <section data-aos="fade-left" className="about__secondBox">
+      <section data-aos="slide-up"className="about__secondBox">
         <div className="cpt">
           <h1 className="allSkills__design__firstTitle" >
             compétences transversales et techniques

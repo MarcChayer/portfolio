@@ -24,7 +24,7 @@ const ProjectDesign = ({
 
   return (
     <div className="titleImage">
-    <ul data-aos="fade-zoom-in" className="projects">
+    <ul data-aos="slide-up" className="projects">
       <li  className="projects__titleProjects" onMouseEnter={handleMouseEnter}>
         <a project-id={id} href="#" >
           {fullName}

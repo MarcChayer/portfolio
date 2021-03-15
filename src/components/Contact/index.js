@@ -8,7 +8,7 @@ import Aos from 'aos';
 // import PropTypes from 'prop-types';
 
 // == Import : local
-import arrow from '../../assets/images/arrow.svg';
+// import arrow from '../../assets/images/arrow.svg';
 import './style.scss';
 import 'aos/dist/aos.css';
 import 'react-toastify/dist/ReactToastify.css';
@@ -82,7 +82,7 @@ const Contact = () => {
         draggable
         pauseOnHover
       />
-      <Link 
+      {/* <Link 
         to="home"  
         activeClass="active" 
         spy={true} 
@@ -91,12 +91,12 @@ const Contact = () => {
         duration={800}
       >
         <button className="arrow">
-        <img 
-          src={arrow} 
-          href="retour accueil" 
-        />
+          <img 
+            src={arrow} 
+            href="retour accueil" 
+          />
         </button>
-      </Link>
+      </Link> */}
     </div>
   );
 };

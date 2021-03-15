@@ -47,12 +47,10 @@
       position: relative;
       line-height : 1.2em;
       padding: 4em 5em;
-      max-width: 800px;
       background-color: vars.$main-dark-color;
       border-left: 2px solid vars.$secondary-color;
       @include backlight(6vw, 0vw, 6vw, 0.70, vars.$secondary-color, #5846f6, 7s);
       &__paragraph {
-        margin-bottom: 2em 1em;
         &__input {
           font-size: 1em;
           height: 40px;
@@ -146,24 +144,6 @@
 }
 .contact__container__form__paragraph__input__message::placeholder {
   color: white;
-}
-
-.arrow {
-  padding: 0;
-  display: absolute;
-  position: fixed;
-  right: 2em;
-  bottom: 2em;
-  width: 2em;
-  background-color: transparent;
-  border: none;
-  transition: 250ms;
-  z-index: 15;
-  &:hover {
-    transform: scale(1.3);
-    transition: 500ms;
-
-  }
 }
 
 .toast{

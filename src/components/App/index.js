@@ -9,6 +9,7 @@ import Home from 'src/containers/Home';
 import About from 'src/containers/About';
 import Projects from 'src/containers/Projects';
 import Contact from 'src/containers/Contact';
+import Footer from 'src/containers/Footer';
 
 import './style.scss';
 import logoMc from '../../assets/images/logoMc.svg';
@@ -17,6 +18,7 @@ import gitHubLogo from '../../assets/images/gitHubLogo.svg';
 import linkedinLogo from '../../assets/images/linkedinLogo.svg';
 import cvLogo from '../../assets/images/cvLogo.svg';
 import cvMc from '../../assets/images/cvMc-2021.pdf';
+import arrow from '../../assets/images/arrow.svg';
 
 
 // == Composant
@@ -40,6 +42,21 @@ const App = () => {
           duration={800}
         >
           <img src={logoMc} alt="Logo Marc Chayer" className="app__logo__MC" />
+        </Link>
+        <Link 
+          to="home"  
+          activeClass="active" 
+          spy={true} 
+          smooth={true}
+          offset={0}
+          duration={800}
+        >
+          <button className="arrow">
+            <img 
+              src={arrow} 
+              href="retour accueil" 
+            />
+          </button>
         </Link>
         <div className="app__logo__all">
           <button className="app__logo__addLink"><img src={addLink} alt="More" onClick={handleOnClick} /></button>
@@ -78,6 +95,9 @@ const App = () => {
       </Route>
       <Route exact path="/">
         <Contact />
+      </Route>
+      <Route exact path="/">
+        <Footer />
       </Route>
     </div>
   );

@@ -1,32 +1,30 @@
 @use 'src/styles/vars';
 
-@mixin backlight($x, $y, $spread, $size, $colorA, $colorB, $duration) {
-  &:after {
-    position: absolute;
-    content: "";
-    top: $y;
-    left: $x;
-    right: 0;
-    z-index: -2;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    transform: scale($size);
-    -webkit-filter: blur($spread);
-    -moz-filter: blur($spread);
-    -ms-filter: blur($spread);
-    filter: blur($spread);
-    background: linear-gradient(145deg, $colorA, $colorB);
-    background-size: 200% 200%;
-    animation: animateGlow $duration ease infinite;
-    
-    @keyframes animateGlow {
-      0%{background-position:0% 50%}
-      50%{background-position:100% 50%}
-      100%{background-position:0% 50%}
-    }
-  }
-}
+// @mixin backlight($x, $y, $spread, $size, $colorA, $colorB, $duration) {
+//   &:after {
+//     content: "";
+//     top: $y;
+//     left: $x;
+//     right: 0;
+//     z-index: -2;
+//     height: 100%;
+//     width: 100%;
+//     margin: 0 auto;
+//     transform: scale($size);
+//     -webkit-filter: blur($spread);
+//     -moz-filter: blur($spread);
+//     -ms-filter: blur($spread);
+//     filter: blur($spread);
+//     background: linear-gradient(145deg, $colorA, $colorB);
+//     background-size: 200% 200%;
+//     animation: animateGlow $duration ease infinite;
+//     @keyframes animateGlow {
+//       0%{background-position:0% 50%}
+//       50%{background-position:100% 50%}
+//       100%{background-position:0% 50%}
+//     }
+//   }
+// }
 
 h1 {
   text-transform: uppercase;
@@ -37,49 +35,64 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   color:white;
   height: 100vh;
+  // &__firstBox {
+  //   @include backlight(4vw, 1vw, 6vw, 0.65, vars.$secondary-color, #5846f6, 7s);
+  // }
+  // &__secondBox {
+  //   @include backlight(4vw, 1vw, 6vw, 0.65, vars.$secondary-color, #5846f6, 7s);
+  // }
 }
 
 .bio {
-  width: 1000px;
+  width: 70vw;
+  height: auto;
   background-color: vars.$main-dark-color;
-  padding: 2em 4em;
-  margin-bottom: 2em;
-  // border-radius: 15px 0 0 15px;
+  padding: 3em 4em;
   border-left: 2px solid vars.$secondary-color;
-  @include backlight(4vw, 1vw, 6vw, 0.65, vars.$secondary-color, #5846f6, 7s);
+  @media screen and (max-width:700px) {
+    width: 100%;
+    margin-bottom: 1em;
+  }
   &__title {
     font-size: 1.5rem;
     color: vars.$secondary-color;
     margin-bottom: 1em;
   }
   &__text {
-    margin-bottom: 1em;
+    margin-bottom: 0.8em;
     line-height: 1.4em;
     &__technos {
       color: vars.$secondary-color;
-      margin-bottom: 1em;
+      margin-bottom: 0.8em;
     }
   }
 }
 
 .cpt {
   background-color: vars.$main-dark-color;
-  width: 1000px;
+  width: 70vw;
   padding: 3em 4em;
-  margin-top: 2em;
   border-left: 2px solid vars.$secondary-color;
-  @include backlight(-4vw, 1vw, 6vw, 0.65, #5846f6, vars.$secondary-color,  4s);
+  @media screen and (max-width:700px) {
+    width: 100%;
+    margin-top: 1em;
+  }
 }
 .allSkills {
   display: flex;
-  width: 100%;
+  @media screen and (max-width:700px) {
+    flex-direction: column;
+  }
   &__design{
-    width: 450px;
-    padding-right: 1em;
+    padding-right: 10em;
     line-height: 1.4em;
+    @media screen and (max-width:700px) {
+      padding-right: 0em;
+      margin-bottom: 1em;
+    }
     &__firstTitle{
       letter-spacing: 0.1rem;
       font-size: 1.5rem;
@@ -97,9 +110,16 @@ h1 {
     flex-direction: column;
     line-height: 1.4em;
     padding-left: 1em;
+    @media screen and (max-width:700px) {
+      padding-left: 0em;
+    }
     &__thirdTitle{
       color: vars.$secondary-color;
       margin: 0 0 0.4em 0;
     }
   }
+}
+
+li {
+  max-width: 500px;
 }
