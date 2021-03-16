@@ -30,15 +30,15 @@ const ProjectDesign = ({
   return (
     <div data-aos="slide-up" className="projects">
       <div className="projects__titleProjects" onMouseEnter={handleMouseEnter}>
-        <h3 project-id={id} href="" className="projects__titleProjects__name" >
+        <h3 project-id={id} className="projects__titleProjects__name" >
           {fullName}
         </h3>
       </div>
       <section className="forMobile">
       <p className="infoProject">{technos}</p>
       <p className="infoProject">{description}</p>
-      <p className="infoProject">{github}</p>
-      <p className="infoProject">{website}</p>
+      <a className="infoProject" href={github} target="_blank">Github du projet</a>
+      <a className="infoProject" href={website} target="_blank">Voir le site en ligne</a>
         <img className="pictureProject" src={image} alt="photo du projet" />
       </section>
     </div>
