@@ -83,20 +83,12 @@ const App = () => {
           }
         </div>
       </div>
+      <Route exact path="/">
         <Header />
-      <Route exact path="/">
         <Home />
-      </Route>
-      <Route exact path="/">
         <Projects />
-      </Route>
-      <Route exact path="/">
         <About />
-      </Route>
-      <Route exact path="/">
         <Contact />
-      </Route>
-      <Route exact path="/">
         <Footer />
       </Route>
     </div>

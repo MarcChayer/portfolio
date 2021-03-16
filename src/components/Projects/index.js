@@ -1,5 +1,6 @@
 // == Import : npm
-import React from 'react';
+import React, { useEffect} from 'react';
+import Aos from 'aos';
 
 import Projetdesign from '../../containers/ProjectDesign'
 import Projetweb from '../../containers/ProjectWeb'
@@ -25,6 +26,10 @@ import portfolio from '../../assets/images/portfolio.jpg';
 
 // == Composant
 const Projects = ({ projectId }) => { 
+  useEffect(() => {
+    Aos.init({ duration: 3000 })
+  },[])
+
   const [showDesign, setShowDesign] = React.useState(false)
   const [showWeb, setShowWeb] = React.useState(true)
   
@@ -39,8 +44,8 @@ const Projects = ({ projectId }) => {
   }
   return (
     <div className="allProjects" >
-        <section data-aos="slide-up" className="allProjects__listLeft" >
-          <div className="project">
+        <section  data-aos="slide-left" className="allProjects__listLeft" >
+          <div className="project" data-aos="slide-up">
             <div className="project__allTitles">
               <button id="titleWeb" onClick={handleOnClick}>
                 web

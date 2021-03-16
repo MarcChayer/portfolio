@@ -3,25 +3,35 @@
 .allProjects {
   display: flex;
   color: white;
-  height: 100vh;
+  // height:100vw;
   font-family: 'bahnschrift';
   letter-spacing: 0.1em;
   font-size: 1.5em;
+  @media screen and (max-width:700px) {
+    width: 100%;
+    max-height: 100%;
+  }
   &__listLeft {
     display: flex;
     align-items: center;
-    height: 100%;
-    max-width: 500px;
+    height: 100vh;
+    width: auto;
     line-height : 1.2em;
-    padding: 0 5em;
     border-right: 2px solid vars.$secondary-color;
-    z-index: 1;
+    @media screen and (max-width:700px) {
+      border-right: none;
+      width: 100%;
+      height: 100%;
+    }
   }
   &__photoProject {
     z-index: -1;
     position: relative;
     height: 100vh;
     width: 100vw;
+    @media screen and (max-width:700px) {
+      display: none;
+    }
   }
 }
 
@@ -49,12 +59,20 @@
 .project {
   display: flex;
   flex-direction: column;  
-  height: 500px;
+  padding: 1em;
+  height: 50%;
+  @media screen and (max-width:700px) {
+    align-items: center;
+    justify-content: flex-start;
+  }
   &__allTitles {
     display: flex;
     justify-content: space-between;
     margin-bottom: 2em;
     width: 225px;
+    @media screen and (max-width:700px) {
+      margin-top: 3em;
+    }
   }
 }
 
@@ -91,15 +109,51 @@
 .projects {
   display: flex;
   flex-direction: column;  
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 1em;
-  width: 300px;
+  width: 20vw;
+  @media screen and (max-width:700px) {
+    width: auto;
+  }
   &__titleProjects {
     display: inline;
     pointer-events: auto;
+    width: 100%;
+    cursor: pointer;
+    @media screen and (max-width:700px) {
+      text-align: center;
+    }
     &:hover {
       color: vars.$secondary-color;
       transition: 500ms;
     }
+    &__name {
+      width: 100%;
+    }
+  }
+}
+
+.forMobile {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 0.75em;
+  letter-spacing: 0.05em;
+  width: auto;
+  @media screen and (min-width:700px) {
+    display: none;
+  }
+}
+
+.infoProject {
+  font-size: 0.6em;
+  margin-bottom: 1em;
+}
+
+.pictureProject {
+  width: 100%;
+  @media screen and (min-width:700px) {
+    display: none;
   }
 }

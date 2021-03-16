@@ -12,11 +12,11 @@ import './style.scss';
 // == Composant
 const About = () => { 
   useEffect(() => {
-    Aos.init({ duration: 2000, disable: 'mobile' })
+    Aos.init({ duration: 2000 })
   },[])
   return (
     <div className="about" >
-      <section data-aos="slide-up"className="about__firstBox">
+      <section data-aos="slide-up" className="about__firstBox">
         <div className="bio" >
           <h1 className="bio__title">
             Bio.
@@ -41,7 +41,7 @@ const About = () => {
           </p>
         </div>
       </section>
-      <section data-aos="slide-up"className="about__secondBox">
+      <section data-aos="slide-up" className="about__secondBox">
         <div className="cpt">
           <h1 className="allSkills__design__firstTitle" >
             compétences transversales et techniques

@@ -46,7 +46,7 @@
     &__form {
       position: relative;
       line-height : 1.2em;
-      padding: 4em 5em;
+      padding: 3em 4em;
       background-color: vars.$main-dark-color;
       border-left: 2px solid vars.$secondary-color;
       @include backlight(6vw, 0vw, 6vw, 0.70, vars.$secondary-color, #5846f6, 7s);

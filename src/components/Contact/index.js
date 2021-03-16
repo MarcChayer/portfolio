@@ -8,7 +8,6 @@ import Aos from 'aos';
 // import PropTypes from 'prop-types';
 
 // == Import : local
-// import arrow from '../../assets/images/arrow.svg';
 import './style.scss';
 import 'aos/dist/aos.css';
 import 'react-toastify/dist/ReactToastify.css';
@@ -31,8 +30,8 @@ const Contact = () => {
   }
 
   return (
-    <div className="contact" >
-      <div className="contact__container" data-aos="flip-down">
+    <div className="contact">
+      <div className="contact__container" data-aos="slide-up">
         <section className="contact__container__form">
           <h2 className="contact__container__title">
           N’hésitez pas à me contacter sur Linkedin

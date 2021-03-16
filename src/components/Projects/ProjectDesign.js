@@ -12,6 +12,8 @@ import 'aos/dist/aos.css';
 const ProjectDesign = ({
   fullName,
   id,
+  description,
+  image,
   getIdTitle,
 }) => { 
   useEffect(() => {
@@ -23,14 +25,16 @@ const ProjectDesign = ({
   };
   
   return (
-    <div className="titleImage">
-      <ul data-aos="slide-up" className="projects">
-        <li  className="projects__titleProjects" onMouseEnter={handleMouseEnter}>
-          <a project-id={id} href="#" >
-            {fullName}
-          </a>
-        </li>
-      </ul>
+    <div data-aos="slide-up" className="projects">
+      <div className="projects__titleProjects" onMouseEnter={handleMouseEnter}>
+        <h3 project-id={id} className="projects__titleProjects__name">
+          {fullName}
+        </h3>
+      </div>
+      <section className="forMobile">
+        <p className="infoProject">{description}</p>
+        <img className="pictureProject" src={image} alt="photo du projet" />
+      </section>
     </div>
   );
 };
