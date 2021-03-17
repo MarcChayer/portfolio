@@ -11,18 +11,9 @@ const About = () => {
     <div className="footer" >
       <section className="footer__mentions">
         <ul className="footer__mentions__left">
-          <li className="footer__mentions__oneInfo">marc chayer</li>
-          <li className="footer__mentions__oneInfo">Copyright © 2021</li>
-        </ul>
-        <ul className="footer__mentions__right">
-          <li className="footer__mentions__oneInfo">06 95 41 41 82</li>
-          <li className="footer__mentions__oneInfo">marc.chayer@icloud.com</li>
+          <li className="footer__mentions__oneInfo">Copyright © 2021 marc chayer</li>
         </ul>
       </section>
-      {/* <section className="copyright">
-        <p>Copyright ©</p>
-        <p>marc chayer 2021</p>
-      </section> */}
     </div>
   );
 };

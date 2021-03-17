@@ -1,6 +1,5 @@
 // == Import : npm
 import React from 'react';
-// import { NavLink } from 'react-router-dom';
 import { Link, animateScroll as scroll } from "react-scroll";
 // import PropTypes from 'prop-types';
 

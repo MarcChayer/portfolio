@@ -16,17 +16,36 @@ import 'react-toastify/dist/ReactToastify.css';
 const Contact = () => { 
   toast.configure();
   useEffect(() => {
-    Aos.init({ duration: 1000 })
+    Aos.init({ duration: 1000, disable: 'mobile' })
   },[])
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const isEmail = () => {
+    let regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (email.match(regex)) {
+      return true;
+    } else {
+      // toast.error('Votre adresse mail ne semble pas valide, essayez à nouveau.', { className:"toast__error" });
+      return false;
+    }
+  }
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
-    emailjs.sendForm("service_gz5igu6", "template_ggn7dso", event.target, "user_9coErnt98IbJYjURIIR9L")
-      .then((res) => {
-          toast.success('Votre message à bien été envoyé, vous aurez un retour rapidement.', { className:"toast__success" });
-      }, (err) => {
-          toast.error('Une erreur est survenue, essayez à nouveau.', { className:"toast__error" });
-      });
+
+    if (name && isEmail() && message) {
+      emailjs.sendForm("service_gz5igu6", "template_ggn7dso", event.target, "user_9coErnt98IbJYjURIIR9L")
+        .then((res) => {
+            toast.success('Votre message à bien été envoyé, vous aurez un retour rapidement.', { className:"toast__success" });
+        });
+    } else if (!isEmail()){
+      toast.error('Votre adresse mail ne semble pas valide, essayez à nouveau.', { className:"toast__error" });
+    } else {
+      toast.error('Une erreur est survenue, essayez à nouveau.', { className:"toast__error" });
+    }
   }
 
   return (
@@ -43,7 +62,9 @@ const Contact = () => {
                 <input
                   name="name"
                   type="text"
+                  onChange={(e) => setName(e.target.value)}
                   placeholder="Nom"
+                  value={name}
                   className="contact__container__form__paragraph__input"
                   autoComplete="off"
                 />
@@ -52,7 +73,9 @@ const Contact = () => {
                 <input
                   name="email"
                   type="email"
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="Email"
+                  value={email}
                   className="contact__container__form__paragraph__input"
                   autoComplete="off"
                 />
@@ -61,7 +84,9 @@ const Contact = () => {
                 <textarea
                   name="message"
                   type="text"
+                  onChange={(e) => setMessage(e.target.value)}
                   placeholder="Message"
+                  value={message}
                   className="contact__container__form__paragraph__input__message"
                   rows="10"
                   autoComplete="off"
@@ -74,7 +99,7 @@ const Contact = () => {
       </div>
       <ToastContainer 
         position="top-right"
-        autoClose={3000}
+        autoClose={4500}
         closeOnClick
         rtl={false}
         pauseOnFocusLoss
