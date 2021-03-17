@@ -1,5 +1,5 @@
 // == Import : npm
-import React, { useEffect} from 'react';
+import React, { useEffect, useState } from 'react';
 import Aos from 'aos';
 
 import Projetdesign from '../../containers/ProjectDesign'
@@ -30,8 +30,8 @@ const Projects = ({ projectId }) => {
     Aos.init({ duration: 3000 })
   },[])
 
-  const [showDesign, setShowDesign] = React.useState(false)
-  const [showWeb, setShowWeb] = React.useState(true)
+  const [showDesign, setShowDesign] = useState(false)
+  const [showWeb, setShowWeb] = useState(true)
   
   const onClick = () => {
     setShowWeb(false);

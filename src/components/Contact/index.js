@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
-import { Link, animateScroll as scroll } from "react-scroll";
+
 import Aos from 'aos';
 
 // import PropTypes from 'prop-types';
@@ -16,7 +16,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Contact = () => { 
   toast.configure();
   useEffect(() => {
-    Aos.init({ duration: 1000, disable: 'mobile' })
+    Aos.init({ duration: 1000 })
   },[])
 
   const [name, setName] = useState("");
@@ -28,14 +28,13 @@ const Contact = () => {
     if (email.match(regex)) {
       return true;
     } else {
-      // toast.error('Votre adresse mail ne semble pas valide, essayez à nouveau.', { className:"toast__error" });
       return false;
     }
   }
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
-
+    // verification des inputs
     if (name && isEmail() && message) {
       emailjs.sendForm("service_gz5igu6", "template_ggn7dso", event.target, "user_9coErnt98IbJYjURIIR9L")
         .then((res) => {
@@ -44,11 +43,13 @@ const Contact = () => {
             setEmail("");
             setMessage("");
         });
-    } else if (!isEmail()){
+    } else if (!isEmail()) {
       toast.error('Votre adresse mail ne semble pas valide, essayez à nouveau.', { className:"toast__error" });
     } else {
-      toast.error('Une erreur est survenue, essayez à nouveau.', { className:"toast__error" });
+      toast.error('Vous devez remplir les trois champs du formulaire.', { className:"toast__error" });
     }
+
+
   }
 
   return (

@@ -8,7 +8,7 @@ const projectsWeb = [
     id : 6,
     fullName: 'TrackFit - Journal alimentaire',
     technos: 'Html - Scss - React - Redux - Node.js - PostgreSQL',
-    description: 'Journal alimentaire et sportif réaliser lors du projet de fin de formation chez O\'lock.',
+    description: 'Journal alimentaire et sportif réalisé lors du projet de fin de formation chez O\'clock.',
     github: 'https://github.com/MarcChayer/TrackFit-Journal-alimentaire-et-sportif',
     website: 'http://3.90.247.93:8080',
     image: trackfit,
