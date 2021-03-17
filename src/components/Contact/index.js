@@ -40,6 +40,9 @@ const Contact = () => {
       emailjs.sendForm("service_gz5igu6", "template_ggn7dso", event.target, "user_9coErnt98IbJYjURIIR9L")
         .then((res) => {
             toast.success('Votre message à bien été envoyé, vous aurez un retour rapidement.', { className:"toast__success" });
+            setName("");
+            setEmail("");
+            setMessage("");
         });
     } else if (!isEmail()){
       toast.error('Votre adresse mail ne semble pas valide, essayez à nouveau.', { className:"toast__error" });
