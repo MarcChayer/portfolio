@@ -44,7 +44,7 @@ const Projects = ({ projectId }) => {
   }
   return (
     <div className="allProjects" >
-        <section  data-aos="slide-left" className="allProjects__listLeft" >
+        <section  data-aos="slide-up" className="allProjects__listLeft" >
           <div className="project" data-aos="slide-up">
             <div className="project__allTitles">
               <button id="titleWeb" onClick={handleOnClick}>
