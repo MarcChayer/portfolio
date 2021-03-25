@@ -15,6 +15,20 @@
       display:none;   
     }
   }
+  &__groupMobile {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    width: 100vw;
+    background-color: vars.$main-dark-color;
+    z-index: 5;
+    @media screen and (min-width:701px) {
+      display:none;   
+    }
+  }
   &__one {
     color: white;
     text-transform: uppercase;
@@ -29,20 +43,6 @@
       color: vars.$secondary-color;
       transition: 500ms;
       text-shadow: none;
-    }
-  }
-  &__groupMobile {
-    display: flex;
-    position: fixed;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 100vh;
-    width: 100vw;
-    background-color: vars.$main-dark-color;
-    z-index: 5;
-    @media screen and (min-width:701px) {
-      display:none;   
     }
   }
 }

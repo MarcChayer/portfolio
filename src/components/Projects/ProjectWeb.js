@@ -1,5 +1,5 @@
 // == Import : npm
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, setState } from 'react';
 import Aos from 'aos';
 
 // import PropTypes from 'prop-types';
@@ -7,8 +7,6 @@ import Aos from 'aos';
 // == Import : local
 import './style.scss';
 import 'aos/dist/aos.css';
-import gitHubLogo from '../../assets/images/gitHubLogo.svg';
-import logoForWeb from '../../assets/images/logoForWeb.svg';
 
 // == Composant
 const ProjectDesign = ({
@@ -25,16 +23,16 @@ const ProjectDesign = ({
     Aos.init({ duration: 3000 })
   },[])
 
+  const [isOpen, setIsOpen] = useState(false)
+  
   const handleMouseEnter = () => {
     getIdTitle(id);
   };
 
-  const [showInfoProject, setshowInfoProject] = useState(false)
-
   const handleOnClickProject = () => {
-    setshowInfoProject(!showInfoProject)
+    setIsOpen(!isOpen)
   }
-
+  
   return (
     <div data-aos="slide-up" className="projects">
       <div className="projects__titleProjects" onMouseEnter={handleMouseEnter}>
@@ -43,13 +41,27 @@ const ProjectDesign = ({
         </h3>
       </div>
       <section className="forMobile">
-        <p className="infoProject technos">{technos}</p>
         <p className="infoProject description">{description}</p>
+        <p className="infoProject technos">{technos}</p>
         <div className="infoProject all">
-          <a className="infoProject all__logo" href={github} target="_blank"><img src={gitHubLogo} alt="Logo GitHub"/></a>
-          <a className="infoProject all__logo" href={website} target="_blank"><img src={logoForWeb} alt="Logo vers site internet"/></a>
+          <a className="infoProject all__link" href={github} target="_blank">Lien Github</a>
+          <a className="infoProject all__link" href={website} target="_blank">Site web</a>
         </div>
       </section>
+      {
+        isOpen === true
+        ?
+        <section className="forDesktop">
+          <p className="infoProject description">{description}</p>
+          <p className="infoProject technos">{technos}</p>
+          <div className="infoProject all">
+            <a className="infoProject all__link" href={github} target="_blank">Lien Github</a>
+            <a className="infoProject all__link" href={website} target="_blank">Site web</a>
+          </div>
+        </section>
+        :
+        null
+      }
       <img className="pictureProject" src={image} alt="photo du projet" />
     </div>
   );

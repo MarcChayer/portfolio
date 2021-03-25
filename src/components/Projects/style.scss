@@ -6,7 +6,7 @@
   // height:100vw;
   font-family: 'bahnschrift';
   letter-spacing: 0.1em;
-  font-size: 1.5em;
+  font-size: 1.4rem;
   @media screen and (max-width:700px) {
     width: 100%;
     max-height: 100%;
@@ -61,6 +61,9 @@
   flex-direction: column;  
   padding: 2em;
   height: 50%;
+  @media screen and (min-width:700px) {
+    justify-content: space-around;
+  }
   @media screen and (max-width:700px) {
     align-items: center;
     justify-content: flex-start;
@@ -91,6 +94,7 @@
   }
 }
 
+
 #titleWeb {
   text-transform: uppercase;
   background-color: transparent;
@@ -106,17 +110,20 @@
   }
 }
 
+.active {
+  color: vars.$secondary-color!important;
+}
+
 .projects {
   display: flex;
-  flex-direction: column;  
-  justify-content: center;
-  margin-bottom: 1em;
+  flex-direction: column;
   width: 20vw;
   @media screen and (max-width:700px) {
     width: auto;
+    margin-bottom: 3em;
   }
   &__titleProjects {
-    display: inline;
+    display: flex;
     pointer-events: auto;
     width: 100%;
     cursor: pointer;
@@ -143,35 +150,54 @@
   width: auto;
   background-color: vars.$main-dark-color;
   padding: 1em ;
+  border-left: 2px solid vars.$secondary-color;
   @media screen and (min-width:700px) {
     display: none;
   }
 }
 
+.forDesktop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 0.75em;
+  letter-spacing: 0.05em;
+  width: auto;
+  background-color: vars.$main-dark-color;
+  padding: 1em ;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  border-left: 2px solid vars.$secondary-color;
+  @media screen and (max-width:700px) {
+    display: none;
+  }
+}
+
 .infoProject {
-  font-size: 0.6em;
+  font-size: 0.7em;
 }
 
 .technos {
-  font-size: 0.5em;
+  font-size: 0.9rem;
   color: vars.$secondary-color;
-  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 .description {
-  font-size: 0.5em;
+  font-size: 0.8rem;
 }
 
 .all {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
   margin-top: 1em;
-  &__logo {
-    height: auto;
-    width: 4em;
+  &__link {
     cursor: pointer;
+    &:hover {
+      color: vars.$secondary-color;
+      transition: 500ms;
+    }
   }
 }
 

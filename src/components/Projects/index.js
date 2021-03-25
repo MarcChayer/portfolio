@@ -30,6 +30,7 @@ const Projects = ({ projectId }) => {
     Aos.init({ duration: 3000 })
   },[])
 
+  // const [isOpen, setIsOpen] = useState(false)
   const [showDesign, setShowDesign] = useState(false)
   const [showWeb, setShowWeb] = useState(true)
   
@@ -42,31 +43,33 @@ const Projects = ({ projectId }) => {
     setShowDesign(false);
     setShowWeb(true);
   }
+  
+
   return (
-    <div className="allProjects" >
-        <section  data-aos="slide-up" className="allProjects__listLeft" >
+    <div className="allProjects">
+        <section  data-aos="slide-up" className="allProjects__listLeft">
           <div className="project" data-aos="slide-up">
             <div className="project__allTitles">
-              <button id="titleWeb" onClick={handleOnClick}>
+              <button id="titleWeb" className={`${ showWeb ? "active" : null }`} onClick={handleOnClick}>
                 web
               </button>
-              <button id="titleDesign" onClick={onClick}>
+              <button id="titleDesign" className={`${ showDesign ? "active" : null }`} onClick={onClick}>
                 design
               </button>
             </div>
-            { 
-              showWeb 
+            {
+              showWeb
               ? 
               projectWebData.map((oneProject) => (
                 <Projetweb
                   key={oneProject.id}
                   {...oneProject}
-                /> 
+                />
               ))
               :
               null 
             }
-            { 
+            {
               showDesign 
               ?
               projectDesignDate.map((oneProject) => (

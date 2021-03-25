@@ -12,6 +12,7 @@ const projectsWeb = [
     github: 'https://github.com/MarcChayer/TrackFit-Journal-alimentaire-et-sportif',
     website: 'http://3.90.247.93:8080',
     image: trackfit,
+    isOpen: false,
   },
   {
     id : 7,
@@ -21,6 +22,7 @@ const projectsWeb = [
     github: '',
     website: 'http://www.mimadohotel.com/',
     image: mimadohotel,
+    isOpen: false,
   },
   {
     id : 8,
@@ -30,6 +32,7 @@ const projectsWeb = [
     github: 'https://github.com/MarcChayer/portfolio',
     website: '',
     image: portfolio,
+    isOpen: false,
   },
 ];
 

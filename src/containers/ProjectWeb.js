@@ -7,7 +7,7 @@ const mapStateToProps = (state) => ({});
 const mapDispatchToProps = (dispatch) => ({
   getIdTitle: (titleId) => {
     dispatch(getIdTitle(titleId));
-  }
+  },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProjectWeb);
