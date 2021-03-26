@@ -148,10 +148,12 @@
 
 .toast{
   &__success {
+    font-family: "bahnschrift";
     color: vars.$secondary-color;
     background-color: vars.$main-dark-color;
   }
   &__error {
+    font-family: "bahnschrift";
     color: vars.$main-dark-color;
     background-color: vars.$secondary-color;
   }
