@@ -44,6 +44,7 @@ const ProjectDesign = ({
           {fullName}
         </h3>
       </div>
+      <img className="pictureProject" src={image} alt="photo du projet" />
       <section className="forMobile">
         <p className="infoProject description">{description}</p>
         <p className="infoProject technos">{technos}</p>
@@ -58,7 +59,6 @@ const ProjectDesign = ({
         :
         null
       }
-      <img className="pictureProject" src={image} alt="photo du projet" />
     </div>
   );
 };

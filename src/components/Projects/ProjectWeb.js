@@ -35,11 +35,11 @@ const ProjectWeb = ({
   const handleOnClickProject = () => {
     handleClick(id);
   }
-
+  
   if (id === projectId) {
     isOpen = !isOpen;
   }
-
+  
   return (
     <div /**data-aos="slide-up"*/ className="projects" >
       <div className="projects__titleProjects" onMouseEnter={handleMouseEnter} >
@@ -47,6 +47,7 @@ const ProjectWeb = ({
           {fullName}
         </h3>
       </div>
+      <img className="pictureProject" src={image} alt="photo du projet" />
       <section className="forMobile">
         <p className="infoProject description">{description}</p>
         <p className="infoProject technos">{technos}</p>
@@ -69,7 +70,6 @@ const ProjectWeb = ({
         :
         null
       }
-      <img className="pictureProject" src={image} alt="photo du projet" />
     </div>
   );
 };
