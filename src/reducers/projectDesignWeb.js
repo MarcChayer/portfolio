@@ -17,6 +17,7 @@ const projectDesignWeb = (state = initialState, action = {}) => {
         ...state,
         idToClick: action.id,
         close: false,
+        // close: !state.close,
       };
     default:
       return state;

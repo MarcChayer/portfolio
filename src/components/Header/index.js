@@ -15,10 +15,11 @@ const Header = () => {
     burger.classList.toggle('active');
     setShowBurgerMenu(!showBurgerMenu);
   }
+
   return (
     <div>
-      <div className="nav">
-        <ul className={"nav__group"} >
+      <div className={`nav`}>
+        <ul className={`nav__group`} >
           <li className="nav__one">
             <Link 
               to="home"  
@@ -64,7 +65,7 @@ const Header = () => {
             </Link>
           </li>
         </ul>
-        </div>
+      </div>
         <div className="burger" onClick={handleOnClick}>
           <span></span>
         </div>
