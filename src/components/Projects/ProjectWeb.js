@@ -18,35 +18,30 @@ const ProjectWeb = ({
   github,
   website,
   image,
-  getIdTitle,
-  isOpen,
-  handleClick,
-  open,
   projectId,
+  isOpen,
+  close,
+  getIdTitle,
+  handleClick,
 }) => { 
   useEffect(() => {
     Aos.init({ duration: 3000 })
   },[])
-
-  const [isOpen2, setIsOpen] = useState(false);
   
   const handleMouseEnter = () => {
     getIdTitle(id);
-    // setIsOpen(true);
   };
 
   const handleOnClickProject = () => {
-    handleClick(id, isOpen);
+    handleClick(id);
   }
 
   if (id === projectId) {
     isOpen = !isOpen;
   }
 
-  console.log('isOpen', isOpen);
-  // data-aos="slide-up"
   return (
-    <div  className="projects" >
+    <div /**data-aos="slide-up"*/ className="projects" >
       <div className="projects__titleProjects" onMouseEnter={handleMouseEnter} >
         <h3 project-id={id} className="projects__titleProjects__name" onClick={handleOnClickProject}>
           {fullName}
@@ -61,7 +56,7 @@ const ProjectWeb = ({
         </div>
       </section>
       {
-        isOpen === true /**&& open === false*/
+        isOpen === true && close === false
         ?
           <section className="forDesktop">
             <p className="infoProject description">{description}</p>

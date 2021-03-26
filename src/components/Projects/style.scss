@@ -126,6 +126,8 @@
     display: flex;
     pointer-events: auto;
     width: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     cursor: pointer;
     @media screen and (max-width:700px) {
       text-align: center;

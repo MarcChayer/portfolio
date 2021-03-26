@@ -15,7 +15,11 @@ const ProjectDesign = ({
   description,
   technos,
   image,
+  projectId,
+  isOpen,
+  close,
   getIdTitle,
+  handleClick,
 }) => { 
   useEffect(() => {
     Aos.init({ duration: 3000 })
@@ -25,14 +29,16 @@ const ProjectDesign = ({
     getIdTitle(id);
   };
 
-  const [showInfoProject, setshowInfoProject] = useState(false)
-
   const handleOnClickProject = () => {
-    setshowInfoProject(!showInfoProject)
+    handleClick(id);
+  }
+
+  if (id === projectId) {
+    isOpen = !isOpen;
   }
   
   return (
-    <div data-aos="slide-up" className="projects">
+    <div /**data-aos="slide-up"*/ className="projects">
       <div className="projects__titleProjects" onMouseEnter={handleMouseEnter}>
         <h3 project-id={id} className="projects__titleProjects__name" onClick={handleOnClickProject}>
           {fullName}
@@ -43,7 +49,7 @@ const ProjectDesign = ({
         <p className="infoProject technos">{technos}</p>
       </section>
       {
-        showInfoProject
+        isOpen === true && close === false
         ?
         <section className="forDesktop">
           <p className="infoProject description">{description}</p>
