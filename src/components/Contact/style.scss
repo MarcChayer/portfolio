@@ -148,9 +148,11 @@
 
 .toast{
   &__success {
-    background-color: vars.$secondary-color;
+    color: vars.$secondary-color;
+    background-color: vars.$main-dark-color;
   }
   &__error {
-    background-color: vars.$toast-error;
+    color: vars.$main-dark-color;
+    background-color: vars.$secondary-color;
   }
 }
