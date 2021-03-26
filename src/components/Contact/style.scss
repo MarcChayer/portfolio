@@ -149,12 +149,12 @@
 .toast{
   &__success {
     font-weight: bold;
-    color: vars.$secondary-color;
-    background-color: vars.$main-dark-color;
+    color: vars.$secondary-color!important;
+    background-color: vars.$main-dark-color!important;
   }
   &__error {
     font-weight: bold;
-    color: vars.$main-dark-color;
-    background-color: vars.$secondary-color;
+    color: vars.$main-dark-color!important;
+    background-color: vars.$secondary-color!important;
   }
 }
