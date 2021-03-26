@@ -54,7 +54,7 @@ const Contact = () => {
 
   return (
     <div className="contact">
-      <div className="contact__container" data-aos="slide-up">
+      <div className="contact__container" /**data-aos="slide-up"*/>
         <section className="contact__container__form">
           <h2 className="contact__container__title">
           N’hésitez pas à me contacter sur Linkedin

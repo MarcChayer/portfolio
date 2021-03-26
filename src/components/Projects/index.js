@@ -46,8 +46,8 @@ const Projects = ({ projectId }) => {
   
   return (
     <div className="allProjects">
-        <section  data-aos="slide-up" className="allProjects__listLeft">
-          <div className="project" data-aos="slide-up">
+        <section  /**data-aos="slide-up"*/ className="allProjects__listLeft">
+          <div className="project" /**data-aos="slide-up"*/>
             <div className="project__allTitles">
               <button id="titleWeb" className={`${ showWeb ? "active" : null }`} onClick={handleOnClick}>
                 web
