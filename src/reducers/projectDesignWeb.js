@@ -1,7 +1,8 @@
-import { ID_DISPATCH } from '../actions/projectDesignWeb';
+import { ID_DISPATCH, HANDLE_CLICK } from '../actions/projectDesignWeb';
 
 const initialState = {
-  id: 6,
+  id:6,
+  open: false,
 };
 
 const projectDesignWeb = (state = initialState, action = {}) => {
@@ -10,6 +11,12 @@ const projectDesignWeb = (state = initialState, action = {}) => {
       return {
         ...state,
         id: action.titleId,
+      };
+    case HANDLE_CLICK:
+      return {
+        ...state,
+        idToClick: action.id,
+        open: true,
       };
     default:
       return state;

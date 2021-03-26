@@ -2,6 +2,7 @@
 import React, { useEffect, useState, setState } from 'react';
 import Aos from 'aos';
 
+import projectWebData from '../../data/projectsWeb';
 // import PropTypes from 'prop-types';
 
 // == Import : local
@@ -9,7 +10,7 @@ import './style.scss';
 import 'aos/dist/aos.css';
 
 // == Composant
-const ProjectDesign = ({
+const ProjectWeb = ({
   fullName,
   id,
   description,
@@ -18,24 +19,35 @@ const ProjectDesign = ({
   website,
   image,
   getIdTitle,
+  isOpen,
+  handleClick,
+  open,
+  projectId,
 }) => { 
   useEffect(() => {
     Aos.init({ duration: 3000 })
   },[])
 
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen2, setIsOpen] = useState(false);
   
   const handleMouseEnter = () => {
     getIdTitle(id);
+    // setIsOpen(true);
   };
 
   const handleOnClickProject = () => {
-    setIsOpen(!isOpen)
+    handleClick(id, isOpen);
   }
-  
+
+  if (id === projectId) {
+    isOpen = !isOpen;
+  }
+
+  console.log('isOpen', isOpen);
+  // data-aos="slide-up"
   return (
-    <div data-aos="slide-up" className="projects">
-      <div className="projects__titleProjects" onMouseEnter={handleMouseEnter}>
+    <div  className="projects" >
+      <div className="projects__titleProjects" onMouseEnter={handleMouseEnter} >
         <h3 project-id={id} className="projects__titleProjects__name" onClick={handleOnClickProject}>
           {fullName}
         </h3>
@@ -49,16 +61,16 @@ const ProjectDesign = ({
         </div>
       </section>
       {
-        isOpen === true
+        isOpen === true /**&& open === false*/
         ?
-        <section className="forDesktop">
-          <p className="infoProject description">{description}</p>
-          <p className="infoProject technos">{technos}</p>
-          <div className="infoProject all">
-            <a className="infoProject all__link" href={github} target="_blank">Lien Github</a>
-            <a className="infoProject all__link" href={website} target="_blank">Site web</a>
-          </div>
-        </section>
+          <section className="forDesktop">
+            <p className="infoProject description">{description}</p>
+            <p className="infoProject technos">{technos}</p>
+            <div className="infoProject all">
+              <a className="infoProject all__link" href={github} target="_blank">Lien Github</a>
+              <a className="infoProject all__link" href={website} target="_blank">Site web</a>
+            </div>
+          </section>
         :
         null
       }
@@ -72,4 +84,4 @@ const ProjectDesign = ({
 // };
 
 // == Export
-export default ProjectDesign;
+export default ProjectWeb;

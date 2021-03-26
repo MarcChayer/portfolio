@@ -44,7 +44,6 @@ const Projects = ({ projectId }) => {
     setShowWeb(true);
   }
   
-
   return (
     <div className="allProjects">
         <section  data-aos="slide-up" className="allProjects__listLeft">
