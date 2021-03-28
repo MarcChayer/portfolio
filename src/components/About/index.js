@@ -22,9 +22,8 @@ const About = () => {
             Bio.
           </h1>
           <p className="bio__text" >
-            Je m'appelle Marc Chayer, j’ai 30 ans et je vis à Toulouse.
-            Graphiste depuis plus de 9 ans, j'ai décidé d’améliorer
-            mes compétences en me tournant vers le developpement web.
+            Je m'appelle Marc Chayer, après avoir réalisé des études dans la communication visuelle, je suis graphiste depuis plus de 9 ans maintenant. 
+            Et j'ai décidé d’améliorer mes compétences en devenant développeur web.
           </p>
           <p className="bio__text" >
             J’ai donc rejoins l’école O’clock (labelisée grande école du numérique) 
@@ -35,8 +34,9 @@ const About = () => {
             HTML, CSS, Javascript, React, Redux, Node.js, PostgreSQL.
           </p>
           <p className="bio__text" >
-            Je suis maintenant à la recherche d’un emploi sur Toulouse 
-            et ses environs afin de mettre en pratique mon savoir
+            Ayant une affinité particulière pour tout ce qui touche à l'UI (interface utilistateur), j'aurais tendance à avoir une préférence pour le front. 
+            Mais j'ai également apprécié mes expériences côté back donc je ne me ferme pas cette porte non plus.
+            Je suis maintenant à la recherche d’un emploi sur Toulouse et ses environs afin de mettre en pratique mon savoir
             et mes compétences techniques.
           </p>
         </div>
