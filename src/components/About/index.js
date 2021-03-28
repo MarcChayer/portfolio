@@ -22,7 +22,7 @@ const About = () => {
             Bio.
           </h1>
           <p className="bio__text" >
-            Je suis Marc Chayer, j’ai 30 ans et je vis à Toulouse.
+            Je m'appelle Marc Chayer, j’ai 30 ans et je vis à Toulouse.
             Graphiste depuis plus de 9 ans, j'ai décidé d’améliorer
             mes compétences en me tournant vers le developpement web.
           </p>

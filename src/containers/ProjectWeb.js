@@ -5,6 +5,7 @@ import ProjectWeb from '../components/Projects/ProjectWeb';
 const mapStateToProps = (state) => ({
   projectId: state.projectDesignWeb.idToClick,
   close: state.projectDesignWeb.close,
+  // isOpen: state.projectDesignWeb.isOpen,
 });
 
 const mapDispatchToProps = (dispatch) => ({

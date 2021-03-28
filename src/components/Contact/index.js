@@ -43,10 +43,11 @@ const Contact = () => {
             setEmail("");
             setMessage("");
         });
+    } 
+    if (!name && !message) {
+      toast.error('Vous devez remplir les trois champs du formulaire.', { className:"toast__error" });
     } else if (!isEmail()) {
       toast.error('Votre adresse mail ne semble pas valide, essayez à nouveau.', { className:"toast__error" });
-    } else {
-      toast.error('Vous devez remplir les trois champs du formulaire.', { className:"toast__error" });
     }
 
 

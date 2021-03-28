@@ -32,13 +32,16 @@ const ProjectWeb = ({
     getIdTitle(id);
   };
 
+  // const [count, setcount] = useState(0)
+
   const handleOnClickProject = () => {
     handleClick(id);
+    // setcount(c => c + 1)
   }
   
   if (id === projectId) {
     isOpen = !isOpen;
-  }
+  } 
   
   return (
     <div /**data-aos="slide-up"*/ className="projects" >

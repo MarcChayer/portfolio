@@ -3,6 +3,7 @@ import { ID_DISPATCH, HANDLE_CLICK } from '../actions/projectDesignWeb';
 const initialState = {
   id:6,
   close: true,
+  // isOpen: false,
 };
 
 const projectDesignWeb = (state = initialState, action = {}) => {
@@ -16,6 +17,7 @@ const projectDesignWeb = (state = initialState, action = {}) => {
       return {
         ...state,
         idToClick: action.id,
+        // isOpen: !state.isOpen,
         close: false,
         // close: !state.close,
       };

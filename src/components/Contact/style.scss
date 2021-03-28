@@ -48,9 +48,16 @@
       position: relative;
       line-height : 1.2em;
       padding: 3em 4em;
+      width: 60vw;
       background-color: vars.$main-dark-color;
       border-left: 2px solid vars.$secondary-color;
       @include backlight(6vw, 0vw, 6vw, 0.70, vars.$secondary-color, #5846f6, 7s);
+      @media screen and (max-width:1000px) {
+        width: 90vw;
+      }
+      @media screen and (max-width:750px) {
+        width: 100%;
+      }
       &__paragraph {
         &__input {
           font-size: 1em;
@@ -150,8 +157,8 @@
 .toast{
   &__success {
     font-weight: bold;
-    color: vars.$secondary-color!important;
-    background-color: vars.$main-dark-color!important;
+    color: vars.$main-dark-color!important;
+    background-color: rgba(255, 255, 255, 0.698)!important;
   }
   &__error {
     font-weight: bold;
