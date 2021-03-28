@@ -19,10 +19,10 @@ const About = () => {
       <section /**data-aos="slide-up"*/ className="about__firstBox">
         <div className="bio" >
           <h1 className="bio__title">
-            Bio.
+            Bio
           </h1>
           <p className="bio__text" >
-            Je m'appelle Marc Chayer, après avoir réalisé des études dans la communication visuelle, je suis graphiste depuis plus de 9 ans maintenant. 
+            Je m'appelle Marc Chayer, après avoir réalisé des études dans la communication visuelle, je suis devenu graphiste et ce, depuis plus de 9 ans maintenant. 
             Et j'ai décidé d’améliorer mes compétences en devenant développeur web.
           </p>
           <p className="bio__text" >

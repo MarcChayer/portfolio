@@ -72,16 +72,27 @@ h1 {
   }
 
   &__title {
+    letter-spacing: .05rem;
     font-size: 1.5rem;
     color: vars.$secondary-color;
     margin-bottom: 1em;
+    @media screen and (max-width:750px) {
+      font-size: 1rem;
+    }
   }
   &__text {
+    font-size: 0.95rem;
     margin-bottom: 0.8em;
     line-height: 1.4em;
+    @media screen and (max-width:750px) {
+      font-size: 0.9rem;
+    }
     &__technos {
       color: vars.$secondary-color;
       margin-bottom: 0.8em;
+      @media screen and (max-width:750px) {
+        font-size: 0.9rem;
+      }
     }
   }
 }
@@ -104,18 +115,23 @@ h1 {
     flex-direction: column;
   }
   &__design{
+    font-size: 0.95rem;
     padding-right: 10em;
     line-height: 1.4em;
     @media screen and (max-width:750px) {
+      font-size: 0.9rem;
       padding-right: 0em;
       margin-bottom: 1em;
     }
     &__firstTitle{
-      letter-spacing: 0.1rem;
+      letter-spacing: .05rem;
       font-size: 1.5rem;
       color: vars.$secondary-color;
       margin-bottom: 1em;
       padding-bottom: 0.3em;
+      @media screen and (max-width:750px) {
+        font-size: 1rem;
+      }
     }
     &__secondTitle{
       color: vars.$secondary-color;
@@ -127,8 +143,11 @@ h1 {
     flex-direction: column;
     line-height: 1.4em;
     padding-left: 1em;
+    font-size: 0.95rem;
+
     @media screen and (max-width:750px) {
       padding-left: 0em;
+      font-size: 0.9rem;
     }
     &__thirdTitle{
       color: vars.$secondary-color;

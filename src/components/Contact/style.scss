@@ -43,6 +43,9 @@
         margin-bottom: 2em;
         color: white;
         text-transform: inherit;
+        @media screen and (max-width:750px) {
+          font-size: 0.9rem;
+        }
       }
     &__form {
       position: relative;
