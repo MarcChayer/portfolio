@@ -11,6 +11,9 @@
     width: 100%;
     max-height: 100%;
   }
+  @media screen and (max-height:590px) {
+    height: 100%;
+  }
   &__listLeft {
     display: flex;
     align-items: center;

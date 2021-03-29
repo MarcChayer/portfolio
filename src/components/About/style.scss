@@ -19,7 +19,6 @@
     background: linear-gradient(145deg, $colorA, $colorB);
     background-size: 200% 200%;
     animation: animateGlow $duration ease infinite;
-    
     @keyframes animateGlow {
       0%{background-position:0% 50%}
       50%{background-position:100% 50%}
@@ -41,12 +40,21 @@ h1 {
   color:white;
   height: 100vh;
   @media screen and (max-width:750px) {
+    justify-content: space-between;
+    height: 100%;
+
+  }
+  @media screen and (max-height:860px) {
+    justify-content: space-between;
     height: 100%;
   }
   &__firstBox {
     position: relative;
     @media screen and (max-width:750px) {
       width: 100%;
+    }
+    @media screen and (max-height:414px) {
+      padding-top: 1em;
     }
     @include backlight(6vw, 0vw, 6vw, 0.70, vars.$secondary-color, #5846f6, 7s);
   }
@@ -55,6 +63,7 @@ h1 {
     @media screen and (max-width:750px) {
       width: 100%;
     }
+
     @include backlight(2vw, 2vw, 6vw, 0.70, vars.$secondary-color, #5846f6, 4s);
   }
 }
@@ -64,13 +73,17 @@ h1 {
   padding: 3em 4em;
   border-left: 2px solid vars.$secondary-color;
   width: 75vw;
-  @media screen and (max-width:1000px) {
+  @media screen and (max-width:1250px) {
     width: 90vw;
   }
   @media screen and (max-width:750px) {
     width: 100%;
   }
-
+  @media screen and (max-height:730px) {
+    padding: 2em 3em;
+    height: auto;
+  }
+  
   &__title {
     letter-spacing: .05rem;
     font-size: 1.5rem;
@@ -79,6 +92,10 @@ h1 {
     @media screen and (max-width:750px) {
       font-size: 1rem;
     }
+    @media screen and (max-height:730px) {
+      margin-bottom: .5em;
+    }
+
   }
   &__text {
     font-size: 0.95rem;
@@ -87,11 +104,19 @@ h1 {
     @media screen and (max-width:750px) {
       font-size: 0.9rem;
     }
+    @media screen and (max-height:730px) {
+      font-size: 0.7rem;
+      letter-spacing: .02rem;
+    }
     &__technos {
       color: vars.$secondary-color;
       margin-bottom: 0.8em;
       @media screen and (max-width:750px) {
         font-size: 0.9rem;
+      }
+      @media screen and (max-height:730px) {
+        font-size: 0.7rem;
+        letter-spacing: .02rem;
       }
     }
   }
@@ -102,11 +127,15 @@ h1 {
   padding: 3em 4em;
   border-left: 2px solid vars.$secondary-color;
   width: 75vw;
-  @media screen and (max-width:1000px) {
+  @media screen and (max-width:1250px) {
     width: 90vw;
   }
   @media screen and (max-width:750px) {
     width: 100%;
+  }
+  @media screen and (max-height:730px) {
+    padding: 2em 3em;
+    height: auto;
   }
 }
 .allSkills {
@@ -123,6 +152,10 @@ h1 {
       padding-right: 0em;
       margin-bottom: 1em;
     }
+    @media screen and (max-height:730px) {
+      font-size: 0.7rem;
+      letter-spacing: .02rem;
+    }
     &__firstTitle{
       letter-spacing: .05rem;
       font-size: 1.5rem;
@@ -131,6 +164,10 @@ h1 {
       padding-bottom: 0.3em;
       @media screen and (max-width:750px) {
         font-size: 1rem;
+      }
+      @media screen and (max-height:730px) {
+        font-size: 0.9rem;
+        margin-bottom: .5em;
       }
     }
     &__secondTitle{
@@ -144,10 +181,14 @@ h1 {
     line-height: 1.4em;
     padding-left: 1em;
     font-size: 0.95rem;
-
     @media screen and (max-width:750px) {
       padding-left: 0em;
       font-size: 0.9rem;
+    }
+    @media screen and (max-height:730px) {
+      font-size: 0.7rem;
+      letter-spacing: .02rem;
+
     }
     &__thirdTitle{
       color: vars.$secondary-color;
