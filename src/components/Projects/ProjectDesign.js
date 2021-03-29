@@ -1,8 +1,8 @@
 // == Import : npm
 import React, { useEffect } from 'react';
 import Aos from 'aos';
+import PropTypes from 'prop-types';
 
-// import PropTypes from 'prop-types';
 
 // == Import : local
 import './style.scss';
@@ -54,9 +54,17 @@ const ProjectDesign = ({
   );
 };
 
-// Projects.propTypes = {
-
-// };
+ProjectDesign.propTypes = {
+  fullName: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+  description: PropTypes.string.isRequired,
+  technos: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  projectId: PropTypes.number,
+  isOpen: PropTypes.bool,
+  getIdTitle: PropTypes.func.isRequired,
+  handleClick: PropTypes.func.isRequired,
+};
 
 // == Export
 export default ProjectDesign;

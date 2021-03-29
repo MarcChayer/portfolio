@@ -1,13 +1,14 @@
 // == Import : npm
 import React, { useEffect, useState } from 'react';
 import Aos from 'aos';
+import PropTypes from 'prop-types';
 
 import Projetdesign from '../../containers/ProjectDesign'
 import Projetweb from '../../containers/ProjectWeb'
 
 import projectDesignData from '../../data/projectsDesign';
 import projectWebData from '../../data/projectsWeb';
-// import PropTypes from 'prop-types';
+
 
 // == Import : local
 import './style.scss';
@@ -86,56 +87,56 @@ const Projects = ({ projectId }) => {
           {
             projectId === 1
             ?
-            <div image-id="1" className="item" style={{ backgroundImage: `url(${laBoite})` }}></div>
+            <div alt="logo La Boîte" image-id={1} className="item" style={{ backgroundImage: `url(${laBoite})` }}></div>
             :
             null
           }
           {
             projectId === 2
             ?
-            <div image-id="2" className="item" style={{ backgroundImage: `url(${lpgc})` }}></div>
+            <div alt="carte de visite LP Génie Climatique" image-id={2} className="item" style={{ backgroundImage: `url(${lpgc})` }}></div>
             :
             null
           }
           {
             projectId === 3
             ?
-            <div image-id="3" className="item" style={{ backgroundImage: `url(${ltdm})` }}></div>
+            <div alt="logo Le Toit De Mauzac" image-id={3} className="item" style={{ backgroundImage: `url(${ltdm})` }}></div>
             :
             null
           }
           {
             projectId === 4
             ?
-            <div image-id="4" className="item" style={{ backgroundImage: `url(${mof})` }}></div>
+            <div alt="logo Men On Fire" image-id={4} className="item" style={{ backgroundImage: `url(${mof})` }}></div>
             :
             null
           }
           {
             projectId === 5
             ?
-            <div image-id="5" className="item" style={{ backgroundImage: `url(${d3d})` }}></div>
+            <div alt="doudoune 3d" image-id={5} className="item" style={{ backgroundImage: `url(${d3d})` }}></div>
             :
             null
           }
           {
             projectId === 6
             ?
-            <div image-id="6" className="item" style={{ backgroundImage: `url(${trackfit})` }}></div>
+            <div alt="project Trackfit" image-id={6} className="item" style={{ backgroundImage: `url(${trackfit})` }}></div>
             :
             null
           }
           {
             projectId === 7
             ?
-            <div image-id="7" className="item" style={{ backgroundImage: `url(${hotel})` }}></div>
+            <div alt="hotel Mimado" image-id={7} className="item" style={{ backgroundImage: `url(${hotel})` }}></div>
             :
             null
           }
           {
             projectId === 8
             ?
-            <div image-id="8" className="item" style={{ backgroundImage: `url(${portfolio})` }}></div>
+            <div alt="porfolio" image-id={8} className="item" style={{ backgroundImage: `url(${portfolio})` }}></div>
             :
             null
           }
@@ -144,9 +145,9 @@ const Projects = ({ projectId }) => {
   );
 };
 
-// Projects.propTypes = {
-
-// };
+Projects.propTypes = {
+  projectId: PropTypes.number.isRequired,
+};
 
 // == Export
 export default Projects;

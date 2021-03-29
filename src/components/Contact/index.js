@@ -111,26 +111,11 @@ const Contact = () => {
         draggable
         pauseOnHover
       />
-      {/* <Link 
-        to="home"  
-        activeClass="active" 
-        spy={true} 
-        smooth={true}
-        offset={0}
-        duration={800}
-      >
-        <button className="arrow">
-          <img 
-            src={arrow} 
-            href="retour accueil" 
-          />
-        </button>
-      </Link> */}
     </div>
   );
 };
-// About.propTypes = {
-
+// Contact.propTypes = {
+  
 // };
 
 // == Export

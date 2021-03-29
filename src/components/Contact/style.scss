@@ -19,7 +19,6 @@
     background: linear-gradient(145deg, $colorA, $colorB);
     background-size: 200% 200%;
     animation: animateGlow $duration ease infinite;
-    
     @keyframes animateGlow {
       0%{background-position:0% 50%}
       50%{background-position:100% 50%}

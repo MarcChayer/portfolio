@@ -1,9 +1,7 @@
 // == Import : npm
 import React, { useEffect } from 'react';
 import Aos from 'aos';
-
-import projectWebData from '../../data/projectsWeb';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 // == Import : local
 import './style.scss';
@@ -61,9 +59,20 @@ const ProjectWeb = ({
   );
 };
 
-// Projects.propTypes = {
 
-// };
+ProjectWeb.propTypes = {
+  fullName: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+  description: PropTypes.string.isRequired,
+  technos: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  projectId: PropTypes.number,
+  github: PropTypes.string.isRequired,
+  website: PropTypes.string.isRequired,
+  isOpen: PropTypes.bool,
+  getIdTitle: PropTypes.func.isRequired,
+  handleClick: PropTypes.func.isRequired,
+};
 
 // == Export
 export default ProjectWeb;

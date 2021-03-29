@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <div>
       <div className={`nav`}>
-        <ul className={`nav__group`} >
+        <ul className={`${showBurgerMenu ? "nav__groupMobile" : "nav__group"}`} >
           <li className="nav__one">
             <Link 
               to="home"  

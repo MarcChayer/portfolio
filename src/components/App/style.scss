@@ -1,5 +1,28 @@
 @use 'src/styles/vars';
 
+@keyframes animBurger {
+  0% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  25% {
+    transform: translateX(75vw);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateX(50vw);
+    opacity: 0.50;
+  }
+  75% {
+    transform: translateX(25vw);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(0vw);
+    opacity: 1;
+  }
+}
+
 .app {
     display: flex;
     flex-direction: column;
@@ -20,18 +43,18 @@
       }
     }
     &__addLink {
+      cursor: pointer;
       position: absolute;
       position: fixed;
       left: 2em;
       bottom: 2em;
-      width: 2em;
+      width: 1.9em;
       background-color: transparent;
       border: none;
-      transition: 250ms;
       z-index: 2;
       padding: 0;
       @media screen and (max-width:700px) {
-        width: 2.3em;
+        width: 2.8em;
       }
       &.active {
         transform: translateY(0px) rotate(45deg);
@@ -41,7 +64,7 @@
       }
     }
     &__addLink:hover {
-      transform: scale(1.3);
+      transform: scale(1.2);
       transition: 500ms;
     }
     &__all {
@@ -52,13 +75,21 @@
       justify-content: space-around;
       align-items: center;
       left: 2em;
-      bottom: 4em;
-      height: 150px;
+      bottom: 5em;
+      height: 180px;
+      padding: .3em .4em;
+      transition: all .4s ease-in-out;
+      @media screen and (max-width:700px) {
+        background-color: vars.$main-dark-color;
+        border-radius: 50px;
+        width: 3em;
+        height: 230px;
+      }
       &__gitHub {
         cursor: pointer;
         width: 1.8em;
         transition: 300ms;
-        animation: transition 1.0s ease-in-out 2.0s, opacity 1.0s ease-in-out 2.0s;
+        animation: transition 1.0s ease-in 2.0s, opacity 1.0s ease-in-out 2.0s;
         &:hover {
           transform: scale(1.3);
           transition: 500ms;
@@ -88,22 +119,24 @@
 }
 
 .arrow {
+  cursor: pointer;
   padding: 0;
   display: absolute;
   position: fixed;
   right: 2em;
   bottom: 2em;
-  width: 2em;
+  width: 1.9em;
   background-color: transparent;
   border: none;
   transition: 250ms;
   z-index: 4;
   @media screen and (max-width:700px) {
-    width: 2.3em;
+    width: 2.8em;
   }
   &:hover {
-    transform: scale(1.3);
+    transform: scale(1.2);
     transition: 500ms;
   }
 }
+
 

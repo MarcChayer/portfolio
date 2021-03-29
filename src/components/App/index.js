@@ -51,37 +51,21 @@ const App = () => {
           offset={0}
           duration={800}
         >
-          <button className="arrow">
+          <div className="arrow">
             <img 
               src={arrow} 
               href="retour accueil" 
             />
-          </button>
+          </div>
         </Link>
-        <div className="app__logo__all">
-          <button className="app__logo__addLink"><img src={addLink} alt="More" onClick={handleOnClick} /></button>
-          {
-            showLogo === true
-            ?
+          <div className="app__logo__addLink">
+            <img src={addLink} alt="More" onClick={handleOnClick}/>
+          </div>
+          <div className={`${showLogo ? "app__logo__all" : "app__logo__all__hiddenLogo"}`} >
             <a className="app__logo__all__gitHub" href="https://github.com/MarcChayer?tab=repositories" target="_blank"><img src={gitHubLogo} alt="Logo GitHub"/></a>
-            :
-            null
-          }
-          {
-            showLogo === true
-            ?
             <a className="app__logo__all__linkedin" href="https://www.linkedin.com/in/chayer-marc/" target="_blank"><img src={linkedinLogo} alt="Logo Linkedin"/></a>            
-            :
-            null
-          }
-          {
-            showLogo === true
-            ?
             <a className="app__logo__all__cv" href={cvMc} download="cv marc chayer"><img src={cvLogo} alt="Logo CV" target="_blank"/></a>
-            :
-            null
-          }
-        </div>
+          </div>
       </div>
       <Route exact path="/">
         <Header />
