@@ -1,5 +1,5 @@
 // == Import : npm
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Aos from 'aos';
 
 // import PropTypes from 'prop-types';
@@ -17,7 +17,6 @@ const ProjectDesign = ({
   image,
   projectId,
   isOpen,
-  close,
   getIdTitle,
   handleClick,
 }) => { 
@@ -30,11 +29,13 @@ const ProjectDesign = ({
   };
 
   const handleOnClickProject = () => {
-    handleClick(id);
+    handleClick(id, isOpen);
   }
 
   if (id === projectId) {
     isOpen = !isOpen;
+  } else {
+    isOpen = false;
   }
   
   return (
@@ -45,20 +46,10 @@ const ProjectDesign = ({
         </h3>
       </div>
       <img className="pictureProject" src={image} alt="photo du projet" />
-      <section className="forMobile">
+      <section className={`${ isOpen === true ? "forDesktop" : "forMobile" }`}>
         <p className="infoProject description">{description}</p>
         <p className="infoProject technos">{technos}</p>
       </section>
-      {
-        isOpen === true && close === false
-        ?
-        <section className="forDesktop">
-          <p className="infoProject description">{description}</p>
-          <p className="infoProject technos">{technos}</p>
-        </section>
-        :
-        null
-      }
     </div>
   );
 };
