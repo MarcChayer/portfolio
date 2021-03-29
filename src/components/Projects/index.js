@@ -5,7 +5,7 @@ import Aos from 'aos';
 import Projetdesign from '../../containers/ProjectDesign'
 import Projetweb from '../../containers/ProjectWeb'
 
-import projectDesignDate from '../../data/projectsDesign';
+import projectDesignData from '../../data/projectsDesign';
 import projectWebData from '../../data/projectsWeb';
 // import PropTypes from 'prop-types';
 
@@ -71,7 +71,7 @@ const Projects = ({ projectId }) => {
             {
               showDesign 
               ?
-              projectDesignDate.map((oneProject) => (
+              projectDesignData.map((oneProject) => (
                 <Projetdesign
                   key={oneProject.id}
                   {...oneProject}

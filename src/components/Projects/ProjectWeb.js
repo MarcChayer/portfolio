@@ -1,5 +1,5 @@
 // == Import : npm
-import React, { useEffect, useState, setState } from 'react';
+import React, { useEffect } from 'react';
 import Aos from 'aos';
 
 import projectWebData from '../../data/projectsWeb';
@@ -20,7 +20,6 @@ const ProjectWeb = ({
   image,
   projectId,
   isOpen,
-  close,
   getIdTitle,
   handleClick,
 }) => { 
@@ -32,17 +31,16 @@ const ProjectWeb = ({
     getIdTitle(id);
   };
 
-  // const [count, setcount] = useState(0)
-
   const handleOnClickProject = () => {
-    handleClick(id);
-    // setcount(c => c + 1)
+    handleClick(id, isOpen);
   }
-  
+
   if (id === projectId) {
     isOpen = !isOpen;
+  } else {
+    isOpen = false;
   } 
-  
+
   return (
     <div /**data-aos="slide-up"*/ className="projects" >
       <div className="projects__titleProjects" onMouseEnter={handleMouseEnter} >
@@ -51,7 +49,7 @@ const ProjectWeb = ({
         </h3>
       </div>
       <img className="pictureProject" src={image} alt="photo du projet" />
-      <section className="forMobile">
+      <section className={`${ isOpen === true ? "forDesktop" : "forMobile" }`}>
         <p className="infoProject description">{description}</p>
         <p className="infoProject technos">{technos}</p>
         <div className="infoProject all">
@@ -59,20 +57,6 @@ const ProjectWeb = ({
           <a className="infoProject all__link" href={website} target="_blank">Site web</a>
         </div>
       </section>
-      {
-        isOpen === true && close === false
-        ?
-          <section className="forDesktop">
-            <p className="infoProject description">{description}</p>
-            <p className="infoProject technos">{technos}</p>
-            <div className="infoProject all">
-              <a className="infoProject all__link" href={github} target="_blank">Lien Github</a>
-              <a className="infoProject all__link" href={website} target="_blank">Site web</a>
-            </div>
-          </section>
-        :
-        null
-      }
     </div>
   );
 };
