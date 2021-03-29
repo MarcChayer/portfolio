@@ -63,7 +63,8 @@
       }
       &__paragraph {
         &__input {
-          font-size: 1em;
+          font-family: 'bahnschrift';
+          letter-spacing: 0.1em;
           height: 40px;
           width: 100%;
           border: none;
@@ -73,36 +74,33 @@
           margin-top: 0.2em;
           background-color: transparent;
           color: white;
-          &__message {
-            font-family: 'bahnschrift';
-            letter-spacing: 0.1em;
-            font-size: 0.8em;
-            width: 100%;
-            resize: none;
-            margin-top: 0.2em;
-            padding: 1em 1em;
-            outline: 0;
-            border: none;
-            border-bottom : 1px solid vars.$secondary-color;
-            background-color: transparent;
-            color: white;
-          }
-          &__message:hover, &__message:focus{
-            border-bottom: 2px solid vars.$secondary-color;
-          }
+          box-sizing:border-box;
+          -webkit-box-sizing:border-box;
         }
         &__input:hover, &__input:focus {
           border-bottom: 2px solid vars.$secondary-color;
         }
-        &__input::placeholder{
+        &__message {
           font-family: 'bahnschrift';
           letter-spacing: 0.1em;
-          font-size: 0.8em;
+          width: 100%;
+          resize: none;
+          margin-top: 0.2em;
+          padding: 1em 1em;
+          outline: 0;
+          border: none;
+          border-bottom : 1px solid vars.$secondary-color;
+          background-color: transparent;
+          color: white;
+          box-sizing:border-box;
+          -webkit-box-sizing:border-box;
         }
-        &__message::placeholder {
-          font-family: 'bahnschrift';
-          letter-spacing: 0.1em;
-          font-size: 0.8em;
+        &__message:hover, &__message:focus{
+          border-bottom: 2px solid vars.$secondary-color;
+          margin-bottom: -1px;
+        }
+        &__message::placeholder{
+          color: white;
         }
         &__formButton {
           display: block;

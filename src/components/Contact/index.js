@@ -92,7 +92,7 @@ const Contact = () => {
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Message"
                   value={message}
-                  className="contact__container__form__paragraph__input__message"
+                  className="contact__container__form__paragraph__message"
                   rows="10"
                   autoComplete="off"
                 />

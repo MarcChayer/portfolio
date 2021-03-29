@@ -85,9 +85,6 @@ const About = () => {
     </div>
   );
 };
-// About.propTypes = {
-
-// };
 
 // == Export
 export default About;
