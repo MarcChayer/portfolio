@@ -4,24 +4,24 @@
   0% {
     transform: translateX(100vw);
     opacity: 0;
-  }
+  };
   25% {
     transform: translateX(75vw);
     opacity: 0.25;
-  }
+  };
   50% {
     transform: translateX(50vw);
     opacity: 0.50;
-  }
+  };
   75% {
     transform: translateX(25vw);
     opacity: 0.75;
-  }
+  };
   100% {
     transform: translateX(0vw);
     opacity: 1;
-  }
-}
+  };
+};
 
 .app {
     display: flex;
@@ -40,8 +40,8 @@
       cursor: pointer;
       @media screen and (max-width:700px) {
         width: 2.3em;
-      }
-    }
+      };
+    };
     &__addLink {
       cursor: pointer;
       position: absolute;
@@ -55,18 +55,18 @@
       padding: 0;
       @media screen and (max-width:700px) {
         width: 2.2em;
-      }
+      };
       &.active {
         transform: translateY(0px) rotate(45deg);
-      }
+      };
       &.active:hover {
         transform: translateY(0px) rotate(45deg);
-      }
-    }
-    &__addLink:hover {
-      transform: scale(1.2);
-      transition: 500ms;
-    }
+      };
+      &:hover {
+        transform: scale(1.2);
+        transition: 500ms;
+      };
+    };
     &__all {
       position: absolute;
       position: fixed;
@@ -84,7 +84,7 @@
         border-radius: 50px;
         width: 3em;
         height: 230px;
-      }
+      };
       &__gitHub {
         cursor: pointer;
         width: 1.8em;
@@ -93,8 +93,8 @@
         &:hover {
           transform: scale(1.3);
           transition: 500ms;
-        }
-      }
+        };
+      };
       &__linkedin {
         cursor: pointer;
         width: 1.5em;
@@ -103,8 +103,8 @@
         &:hover {
           transform: scale(1.3);
           transition: 500ms;
-        }
-      }
+        };
+      };
       &__cv {
         cursor: pointer;
         width: 1.5em;
@@ -112,11 +112,11 @@
         animation: transition 1.0s ease-in-out 2.0s, opacity 1.0s ease-in-out 2.0s;
         &:hover {
           transform: scale(1.3);
-        }
-      }
-    } 
-  }
-}
+        };
+      };
+    };
+  };
+};
 
 .arrow {
   cursor: pointer;
@@ -132,11 +132,11 @@
   z-index: 4;
   @media screen and (max-width:700px) {
     width: 2.2em;
-  }
+  };
   &:hover {
     transform: scale(1.2);
     transition: 500ms;
-  }
-}
+  };
+};
 
 
