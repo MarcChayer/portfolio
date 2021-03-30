@@ -1,7 +1,7 @@
 // == Import : npm
-import React, { useEffect, useState } from 'react';
-import Aos from 'aos';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 
 import Projetdesign from '../../containers/ProjectDesign'
 import Projetweb from '../../containers/ProjectWeb'
@@ -12,7 +12,6 @@ import projectWebData from '../../data/projectsWeb';
 
 // == Import : local
 import './style.scss';
-import 'aos/dist/aos.css';
 
 // image design project
 import laBoite from '../../assets/images/laBoite.jpg';
@@ -27,11 +26,7 @@ import portfolio from '../../assets/images/portfolio.jpg';
 
 // == Composant
 const Projects = ({ projectId }) => { 
-  useEffect(() => {
-    Aos.init({ duration: 3000 })
-  },[])
 
-  // const [isOpen, setIsOpen] = useState(false)
   const [showDesign, setShowDesign] = useState(false)
   const [showWeb, setShowWeb] = useState(true)
   
@@ -47,8 +42,15 @@ const Projects = ({ projectId }) => {
   
   return (
     <div className="allProjects">
-        <section  /**data-aos="slide-up"*/ className="allProjects__listLeft">
-          <div className="project" /**data-aos="slide-up"*/>
+      <Helmet defaultTitle="Portfolio - Marc Chayer">
+        <title>Portfolio - Marc Chayer</title>
+        <meta
+          name="description"
+          content="Marc Chayer, graphiste et développeur web vous présente son portfolio. Vous trouverez quelques-uns des projets que j'ai pu réaliser, que ce soit pour du web ou du design. Ainsi que la possibilité de me contacter"
+        />
+      </Helmet>
+        <section className="allProjects__listLeft">
+          <div className="project">
             <div className="project__allTitles">
               <button id="titleWeb" className={`${ showWeb ? "active" : null }`} onClick={handleOnClick}>
                 web

@@ -2,6 +2,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import { Link, animateScroll as scroll } from "react-scroll";
+import { Helmet } from 'react-helmet';
 
 // == Import
 import Header from 'src/containers/Header';
@@ -32,6 +33,13 @@ const App = () => {
   }
   return (
     <div className="app">
+      <Helmet defaultTitle="Portfolio - Marc Chayer">
+        <title>Portfolio - Marc Chayer</title>
+        <meta
+          name="description"
+          content="Marc Chayer, graphiste et développeur web vous présente son portfolio. Vous trouverez quelques-uns des projets que j'ai pu réaliser, que ce soit pour du web ou du design. Ainsi que la possibilité de me contacter"
+        />
+      </Helmet>
       <div className="app__logo">
         <Link 
           to="home"  
@@ -54,17 +62,17 @@ const App = () => {
           <div className="arrow">
             <img 
               src={arrow} 
-              href="retour accueil" 
+              alt="Retour accueil"
             />
           </div>
         </Link>
           <div className="app__logo__addLink">
-            <img src={addLink} alt="More" onClick={handleOnClick}/>
+            <img src={addLink} alt="Accés réseaux sociaux et cv" onClick={handleOnClick}/>
           </div>
           <div className={`${showLogo ? "app__logo__all" : "app__logo__all__hiddenLogo"}`} >
-            <a className="app__logo__all__gitHub" href="https://github.com/MarcChayer?tab=repositories" target="_blank"><img src={gitHubLogo} alt="Logo GitHub"/></a>
-            <a className="app__logo__all__linkedin" href="https://www.linkedin.com/in/chayer-marc/" target="_blank"><img src={linkedinLogo} alt="Logo Linkedin"/></a>            
-            <a className="app__logo__all__cv" href={cvMc} download="cv marc chayer"><img src={cvLogo} alt="Logo CV" target="_blank"/></a>
+            <a className="app__logo__all__gitHub" href="https://github.com/MarcChayer?tab=repositories" target="_blank" rel="noopener"><img src={gitHubLogo} alt="Logo GitHub"/></a>
+            <a className="app__logo__all__linkedin" href="https://www.linkedin.com/in/chayer-marc/" target="_blank" rel="noopener"><img src={linkedinLogo} alt="Logo Linkedin"/></a>            
+            <a className="app__logo__all__cv" href={cvMc} download="cv marc chayer"><img src={cvLogo} alt="Logo CV" target="_blank" rel="noopener"/></a>
           </div>
       </div>
       <Route exact path="/">

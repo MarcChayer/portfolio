@@ -1,7 +1,6 @@
 // == Import : npm
 import React from 'react';
 import { Link, animateScroll as scroll } from "react-scroll";
-// import PropTypes from 'prop-types';
 
 // == Import : local
 import './style.scss';
@@ -128,10 +127,6 @@ const Header = () => {
     </div>
   );
 };
-
-// Navigation.propTypes = {
-
-// };
 
 // == Export
 export default Header;

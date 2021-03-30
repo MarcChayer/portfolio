@@ -1,11 +1,9 @@
 // == Import : npm
-import React, { useEffect } from 'react';
-import Aos from 'aos';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 // == Import : local
 import './style.scss';
-import 'aos/dist/aos.css';
 
 // == Composant
 const ProjectWeb = ({
@@ -21,9 +19,6 @@ const ProjectWeb = ({
   getIdTitle,
   handleClick,
 }) => { 
-  useEffect(() => {
-    Aos.init({ duration: 3000 })
-  },[])
   
   const handleMouseEnter = () => {
     getIdTitle(id);
@@ -40,7 +35,7 @@ const ProjectWeb = ({
   } 
 
   return (
-    <div /**data-aos="slide-up"*/ className="projects" >
+    <div className="projects" >
       <div className="projects__titleProjects" onMouseEnter={handleMouseEnter} >
         <h3 project-id={id} className="projects__titleProjects__name" onClick={handleOnClickProject}>
           {fullName}
@@ -51,8 +46,8 @@ const ProjectWeb = ({
         <p className="infoProject description">{description}</p>
         <p className="infoProject technos">{technos}</p>
         <div className="infoProject all">
-          <a className="infoProject all__link" href={github} target="_blank">Lien Github</a>
-          <a className="infoProject all__link" href={website} target="_blank">Site web</a>
+          <a className="infoProject all__link" href={github} target="_blank" rel="noopener">Lien Github</a>
+          <a className="infoProject all__link" href={website} target="_blank" rel="noopener">Site web</a>
         </div>
       </section>
     </div>

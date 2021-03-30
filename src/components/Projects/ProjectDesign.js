@@ -1,12 +1,9 @@
 // == Import : npm
-import React, { useEffect } from 'react';
-import Aos from 'aos';
+import React from 'react';
 import PropTypes from 'prop-types';
-
 
 // == Import : local
 import './style.scss';
-import 'aos/dist/aos.css';
 
 // == Composant
 const ProjectDesign = ({
@@ -20,9 +17,6 @@ const ProjectDesign = ({
   getIdTitle,
   handleClick,
 }) => { 
-  useEffect(() => {
-    Aos.init({ duration: 3000 })
-  },[])
 
   const handleMouseEnter = () => {
     getIdTitle(id);
@@ -39,7 +33,7 @@ const ProjectDesign = ({
   }
   
   return (
-    <div /**data-aos="slide-up"*/ className="projects">
+    <div className="projects">
       <div className="projects__titleProjects" onMouseEnter={handleMouseEnter}>
         <h3 project-id={id} className="projects__titleProjects__name" onClick={handleOnClickProject}>
           {fullName}

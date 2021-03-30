@@ -1,23 +1,16 @@
 // == Import : npm
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
-
-import Aos from 'aos';
-
-// import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 
 // == Import : local
 import './style.scss';
-import 'aos/dist/aos.css';
 import 'react-toastify/dist/ReactToastify.css';
 
 // == Composant
 const Contact = () => { 
   toast.configure();
-  useEffect(() => {
-    Aos.init({ duration: 1000 })
-  },[])
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -49,13 +42,18 @@ const Contact = () => {
     } else if (!isEmail()) {
       toast.error('Votre adresse mail ne semble pas valide, essayez à nouveau.', { className:"toast__error" });
     }
-
-
   }
 
   return (
     <div className="contact">
-      <div className="contact__container" /**data-aos="slide-up"*/>
+      <Helmet defaultTitle="Portfolio - Marc Chayer">
+        <title>Portfolio - Marc Chayer</title>
+        <meta
+          name="description"
+          content="Marc Chayer, graphiste et développeur web vous présente son portfolio. Vous trouverez quelques-uns des projets que j'ai pu réaliser, que ce soit pour du web ou du design. Ainsi que la possibilité de me contacter"
+        />
+      </Helmet>
+      <div className="contact__container" >
         <section className="contact__container__form">
           <h2 className="contact__container__title">
           N’hésitez pas à me contacter sur Linkedin
@@ -114,9 +112,6 @@ const Contact = () => {
     </div>
   );
 };
-// Contact.propTypes = {
-  
-// };
 
 // == Export
 export default Contact;

@@ -1,22 +1,23 @@
 // == Import : npm
-import React, { useEffect } from 'react';
-import Aos from 'aos';
-// import { config, useSpring, animated } from 'react-spring'
-
-// import PropTypes from 'prop-types';
+import React from 'react';
+import { Helmet } from 'react-helmet';
 
 // == Import : local
 import './style.scss';
-// import 'aos/dist/aos.css';
 
 // == Composant
 const About = () => { 
-  useEffect(() => {
-    Aos.init({ duration: 2000 })
-  },[])
+
   return (
     <div className="about" >
-      <section /**data-aos="slide-up"*/ className="about__firstBox">
+      <Helmet defaultTitle="Portfolio - Marc Chayer">
+        <title>Portfolio - Marc Chayer</title>
+        <meta
+          name="description"
+          content="Marc Chayer, graphiste et développeur web vous présente son portfolio. Vous trouverez quelques-uns des projets que j'ai pu réaliser, que ce soit pour du web ou du design. Ainsi que la possibilité de me contacter"
+        />
+      </Helmet>
+      <section className="about__firstBox">
         <div className="bio" >
           <h1 className="bio__title">
             Bio
@@ -41,7 +42,7 @@ const About = () => {
           </p>
         </div>
       </section>
-      <section /**data-aos="slide-up"*/ className="about__secondBox">
+      <section className="about__secondBox">
         <div className="cpt">
           <h1 className="allSkills__design__firstTitle" >
             compétences transversales et techniques
