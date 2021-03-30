@@ -54,7 +54,7 @@
       z-index: 2;
       padding: 0;
       @media screen and (max-width:700px) {
-        width: 2.8em;
+        width: 2.2em;
       }
       &.active {
         transform: translateY(0px) rotate(45deg);
@@ -131,7 +131,7 @@
   transition: 250ms;
   z-index: 4;
   @media screen and (max-width:700px) {
-    width: 2.8em;
+    width: 2.2em;
   }
   &:hover {
     transform: scale(1.2);
