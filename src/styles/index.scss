@@ -9,6 +9,6 @@
 body {
   font-family: 'bahnschrift';  
   background: linear-gradient(-45deg, vars.$main-dark-color 0%, #020407 50%, vars.$main-dark-color 100%) no-repeat;
-  height: 100%;
+  overflow: auto;
 }
 
