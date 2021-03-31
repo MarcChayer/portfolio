@@ -60,7 +60,7 @@ const Contact = () => {
           ou en remplissant le formulaire de cette page.
           </h2>
           <div className="contact__container__form__paragraph">
-            <form method="post" onSubmit={handleOnSubmit}>
+            <form method="post">
               <label className="form__label">Nom
                 <input
                   name="name"
@@ -95,7 +95,15 @@ const Contact = () => {
                   autoComplete="off"
                 />
               </label>
-              <button className="btn contact__container__form__paragraph__formButton" type="submit" ><span>Envoyer</span></button>
+              <div class="buttonSubmit" >
+                <a onClick={handleOnSubmit}>
+                  <span class="text">Envoyer</span>
+                  <span class="line -right"></span>
+                  <span class="line -top"></span>
+                  <span class="line -left"></span>
+                  <span class="line -bottom"></span>
+                </a>
+              </div>
             </form>
           </div>
         </section>
