@@ -9,7 +9,7 @@ import './style.scss';
 const About = () => { 
 
   return (
-    <div className="about" >
+    <div className="about">
       <Helmet defaultTitle="Portfolio - Marc Chayer">
         <title>Portfolio - Marc Chayer</title>
         <meta

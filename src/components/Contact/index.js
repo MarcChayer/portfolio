@@ -60,7 +60,7 @@ const Contact = () => {
           ou en remplissant le formulaire de cette page.
           </h2>
           <div className="contact__container__form__paragraph">
-            <form method="post">
+            <form method="post" onSubmit={handleOnSubmit}>
               <label className="form__label">Nom
                 <input
                   name="name"
@@ -96,8 +96,8 @@ const Contact = () => {
                 />
               </label>
               <div class="buttonSubmit" >
-                <a onClick={handleOnSubmit}>
-                  <span class="text">Envoyer</span>
+                <a >
+                  <button class="text" type="submit">Envoyer</button>
                   <span class="line -right"></span>
                   <span class="line -top"></span>
                   <span class="line -left"></span>
