@@ -23,7 +23,7 @@ const About = () => {
             Bio
           </h1>
           <p className="bio__text" >
-            Je m'appelle Marc Chayer, après avoir un cursus dans la communication visuelle, j'ai pu accéder à un poste de graphiste, dans lequel j'ai exercé pendant plus de 9 ans. Ayant un attrait pour le web et ses nombreuses possibilités. J'ai décidé de diversifier mes compétences en devenant développeur web.
+            Je m'appelle Marc Chayer, après avoir fait un cursus dans la communication visuelle, j'ai pu accéder à un poste de graphiste, dans lequel j'ai exercé pendant plus de 9 ans. Ayant un attrait pour le web et ses nombreuses possibilités. J'ai décidé de diversifier mes compétences en devenant développeur web.
           </p>
           <p className="bio__text" >
             J’ai alors rejoins l’école O’clock (labelisée grande école du numérique) 
