@@ -56,10 +56,10 @@
   "dependencies": {
     "emailjs-com": "^2.6.4",
     "hosted-git-info": "2.8.9",
-    "is-svg": "4.2.2",
+    "is-svg": "4.3.0",
     "lodash": "4.17.21",
     "node-fetch": "^2.6.1",
-    "postcss": "8.2.10",
+    "postcss": "8.2.13",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
