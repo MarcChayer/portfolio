@@ -26,7 +26,7 @@ const About = () => {
             Je m'appelle Marc Chayer, après avoir fait un cursus dans la communication visuelle, j'ai pu accéder à un poste de graphiste, dans lequel j'ai exercé pendant plus de 9 ans. Ayant un attrait pour le web et ses nombreuses possibilités. J'ai décidé de diversifier mes compétences en devenant développeur web.
           </p>
           <p className="bio__text" >
-            J’ai alors rejoins l’école O’clock (labelisée grande école du numérique) 
+            J’ai alors rejoins l’école O’clock (labellisée grande école du numérique) 
             pour une formation intensive de 5 mois, où j’ai pu apprendre 
             les technos suivantes : 
           </p>
@@ -34,7 +34,7 @@ const About = () => {
             HTML, CSS, Javascript, React, Redux, Node.js, PostgreSQL.
           </p>
           <p className="bio__text" >
-            Ayant une affinité particulière pour tout ce qui touche à l'UI (interface utilistateur), j'aurais tendance à avoir une préférence pour le front. 
+            Ayant une affinité particulière pour tout ce qui touche à l'UI (interface utilisateur), j'aurais tendance à avoir une préférence pour le front. 
             Mais j'ai également apprécié mes expériences côté back donc je ne me ferme pas cette porte non plus.
             Je suis maintenant à la recherche d’un emploi sur Toulouse et ses environs afin de mettre en pratique mon savoir
             et mes compétences techniques.
@@ -66,7 +66,7 @@ const About = () => {
               </div>
               <div className="allSkills__web">
                 <h2 className="allSkills__web__thirdTitle">
-                  Developpement web : 
+                  Développement web :
                 </h2>
                 <ul className="allSkills__web__skillsLeft">
                   <li>- Méthode AGILE (SCRUM)</li>

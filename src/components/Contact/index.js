@@ -56,7 +56,7 @@ const Contact = () => {
       <div className="contact__container" >
         <section className="contact__container__form">
           <h2 className="contact__container__title">
-          N’hésitez pas à me contacter sur Linkedin
+          N’hésitez pas à me contacter sur LinkedIn
           ou en remplissant le formulaire de cette page.
           </h2>
           <div className="contact__container__form__paragraph">
